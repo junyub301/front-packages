@@ -14,7 +14,7 @@ const generateThemeCssVariables = () =>{
                     const selector = ':root';
                     const cssVariables = Object.entries(colorValue).map(([mainKey,mainValue]) => 
                         Object.entries(mainValue).map(([subKey,subValue]) => 
-                            `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue}`).join("\n")
+                            `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`).join("\n")
                     ).join("\n")
 
                     cssString.push(`${selector} {\n${cssVariables}\n}`)
