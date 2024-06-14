@@ -20,7 +20,7 @@ const View = () => (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <Text className='headingxl'>
-        Edit <code>src/App.tsx</code> and save to reload.
+        font color is {vars.colors.$static.light.red[500]} {vars.box.radii.base}
       </Text>
       <a
         className="App-link"
