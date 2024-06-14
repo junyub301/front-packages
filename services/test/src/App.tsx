@@ -2,10 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import styled from '@emotion/styled';
-import { vars } from '@study/themes';
+import { vars,classes } from '@study/themes';
 
 function App() {
 
+  
   return (
     <View />
   )
@@ -18,7 +19,7 @@ const View = () => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <Text>
+      <Text className='headingxl'>
         Edit <code>src/App.tsx</code> and save to reload.
       </Text>
       <a
