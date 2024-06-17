@@ -1,7 +1,15 @@
 {
   "name": "front-package",
   "version": "1.0.0",
+  "workspaces": [
+    "packages/**/*",
+    "services/**/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nx build",
+    "graph":"nx run-many --target=build --graph"
+  },
+  "devDependencies": {
+    "nx": "^16.8.1"
   }
 }
