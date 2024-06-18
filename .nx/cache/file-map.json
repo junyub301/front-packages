@@ -1,0 +1,357 @@
+{
+  "version": "6.0",
+  "nxVersion": "16.10.0",
+  "deps": {
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "eslint": "^9.5.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-storybook": "^0.6.13",
+    "nx": "^16.8.1",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  },
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".eslintrc.js",
+        "hash": "1268816307342825078"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "1797353270377212724"
+      },
+      {
+        "file": ".nx/cache/10100591829120946733/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/10100591829120946733/source",
+        "hash": "11208802318997815260"
+      },
+      {
+        "file": ".nx/cache/10100591829120946733/terminalOutput",
+        "hash": "18204571200416807063"
+      },
+      {
+        "file": ".nx/cache/10100591829120946733.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/4305147347006328248/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/4305147347006328248/source",
+        "hash": "11208802318997815260"
+      },
+      {
+        "file": ".nx/cache/4305147347006328248/terminalOutput",
+        "hash": "11765824241637476099"
+      },
+      {
+        "file": ".nx/cache/4305147347006328248.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/5454705930836811984/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/5454705930836811984/source",
+        "hash": "11208802318997815260"
+      },
+      {
+        "file": ".nx/cache/5454705930836811984/terminalOutput",
+        "hash": "11765824241637476099"
+      },
+      {
+        "file": ".nx/cache/5454705930836811984.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/6573197455611343948/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/6573197455611343948/source",
+        "hash": "11208802318997815260"
+      },
+      {
+        "file": ".nx/cache/6573197455611343948/terminalOutput",
+        "hash": "4028541921023921726"
+      },
+      {
+        "file": ".nx/cache/6573197455611343948.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/982797234723011833/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/982797234723011833/source",
+        "hash": "11208802318997815260"
+      },
+      {
+        "file": ".nx/cache/982797234723011833/terminalOutput",
+        "hash": "11765824241637476099"
+      },
+      {
+        "file": ".nx/cache/982797234723011833.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/d/server-process.json",
+        "hash": "3283333833589026737"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "3890313513724959926"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "4666914863434179881"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "10394771233929154765"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "7509052461913885828"
+      },
+      {
+        "file": ".nx/cache/run.json",
+        "hash": "3001390213910281173"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/10100591829120946733",
+        "hash": "18204571200416807063"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/17953016868833172760",
+        "hash": "1949036008536567161"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/18246673383576274558",
+        "hash": "10950814416677312769"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/2478846879432916787",
+        "hash": "9690159821110135935"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4183631811754452686",
+        "hash": "47985906089844099"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4305147347006328248",
+        "hash": "11765824241637476099"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5454705930836811984",
+        "hash": "11765824241637476099"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5667035339879463029",
+        "hash": "47985906089844099"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5716769423089960233",
+        "hash": "47985906089844099"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/6573197455611343948",
+        "hash": "4028541921023921726"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/966974630659498395",
+        "hash": "3747925982916847327"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/982797234723011833",
+        "hash": "11765824241637476099"
+      },
+      {
+        "file": ".nx/workspace-data/d/server-process.json",
+        "hash": "7365009333520266770"
+      },
+      {
+        "file": ".nx/workspace-data/file-map.json",
+        "hash": "14748078436654116241"
+      },
+      {
+        "file": ".nx/workspace-data/lockfile.hash",
+        "hash": "10542723990618400409"
+      },
+      {
+        "file": ".nx/workspace-data/parsed-lock-file.json",
+        "hash": "17138920149621887318"
+      },
+      {
+        "file": ".nx/workspace-data/project-graph.json",
+        "hash": "14177735712939497810"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16320234575558175243"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "10535867006991962306"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "5192163659098944044"
+      },
+      {
+        "file": ".yarn/releases/yarn-berry.cjs",
+        "hash": "5844628996811314674"
+      },
+      {
+        "file": ".yarn/sdks/eslint/bin/eslint.js",
+        "hash": "5536091967665342893"
+      },
+      {
+        "file": ".yarn/sdks/eslint/lib/api.js",
+        "hash": "14270210651293878684"
+      },
+      {
+        "file": ".yarn/sdks/eslint/lib/unsupported-api.js",
+        "hash": "12957267032037696414"
+      },
+      {
+        "file": ".yarn/sdks/eslint/package.json",
+        "hash": "4371782187185127411"
+      },
+      {
+        "file": ".yarn/sdks/integrations.yml",
+        "hash": "5703335058684100671"
+      },
+      {
+        "file": ".yarnrc.yml",
+        "hash": "10948785259396966271"
+      },
+      {
+        "file": "README.md",
+        "hash": "4361381307903703750"
+      },
+      {
+        "file": "nx.json",
+        "hash": "7778652199762446780"
+      },
+      {
+        "file": "package.json",
+        "hash": "4589155329189709891"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "7951299040495598289"
+      },
+      {
+        "file": "tsconfig.eslint.json",
+        "hash": "12435982437874655429"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "8706824041354863748"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3191934474684431132",
+        "hash": "8572013721523908436"
+      }
+    ],
+    "projectFileMap": {
+      "@study/themes": [
+        {
+          "file": "packages/themes/build.js",
+          "hash": "16834591356065467189"
+        },
+        {
+          "file": "packages/themes/package.json",
+          "hash": "4799668863449112593"
+        },
+        {
+          "file": "packages/themes/scripts/build-css-module.js",
+          "hash": "2691046446969541613"
+        },
+        {
+          "file": "packages/themes/src/classes/index.ts",
+          "hash": "15146067985360994259"
+        },
+        {
+          "file": "packages/themes/src/classes/typography.ts",
+          "hash": "9322460245457577087"
+        },
+        {
+          "file": "packages/themes/src/index.ts",
+          "hash": "10898633836259025946"
+        },
+        {
+          "file": "packages/themes/src/variables/box.ts",
+          "hash": "210693563343750772"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/index.ts",
+          "hash": "5597373426469787833"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/scale.ts",
+          "hash": "203176103392636372"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/dark.ts",
+          "hash": "14400898959681543855"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/index.ts",
+          "hash": "17981935273116906080"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/light.ts",
+          "hash": "9041976704426893786"
+        },
+        {
+          "file": "packages/themes/src/variables/index.ts",
+          "hash": "9343087048230704055"
+        },
+        {
+          "file": "packages/themes/src/variables/typography.ts",
+          "hash": "1729358794327708129"
+        },
+        {
+          "file": "packages/themes/tsconfig.json",
+          "hash": "8341753514460594905"
+        }
+      ],
+      "@study/esbuild-config": [
+        {
+          "file": "packages/esbuild-config/README.md",
+          "hash": "6886952344311067916"
+        },
+        {
+          "file": "packages/esbuild-config/index.js",
+          "hash": "2789728533718397977"
+        },
+        {
+          "file": "packages/esbuild-config/package.json",
+          "hash": "1059329843381448378"
+        }
+      ]
+    }
+  }
+}
