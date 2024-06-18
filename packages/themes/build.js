@@ -1,4 +1,4 @@
-import run from "@typescript-eslint/eslint-plugin";
+import run from "@study/esbuild-config";
 import pkg from "./package.json" assert {type:"json"};
 
 run({pkg})

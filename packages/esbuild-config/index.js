@@ -1,4 +1,5 @@
-const { build } = require('esbuild');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { build } = require("esbuild")
 
 const run = ({
   entryPoints = ['src/index.ts'],
