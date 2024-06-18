@@ -1,0 +1,21 @@
+/Users/yub/code/front-package/.pnp.cjs:10894
+  return Object.defineProperties(new Error(message), {
+                                 ^
+
+Error: Your application tried to access @typescript-eslint/eslint-plugin, but it isn't declared in your dependencies; this makes the require call ambiguous and unsound.
+
+Required package: @typescript-eslint/eslint-plugin (via "@typescript-eslint/eslint-plugin/package.json")
+Required by: /Users/yub/code/front-package/packages/themes/build.js
+
+    at makeError (/Users/yub/code/front-package/.pnp.cjs:10894:34)
+    at resolveToUnqualified (/Users/yub/code/front-package/.pnp.cjs:12532:21)
+    at Object.resolveToUnqualified (/Users/yub/code/front-package/.pnp.cjs:12722:26)
+    at resolve$1 (file:///Users/yub/code/front-package/.pnp.loader.mjs:2033:31)
+    at nextResolve (node:internal/modules/esm/hooks:654:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:309:30)
+    at ESMLoader.resolve (node:internal/modules/esm/loader:312:26)
+    at ESMLoader.getModuleJob (node:internal/modules/esm/loader:172:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:76:40)
+    at link (node:internal/modules/esm/module_job:75:36)
+
+Node.js v19.9.0
