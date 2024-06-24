@@ -1,21 +1,21 @@
 {
   "run": {
-    "command": "nx build @study/themes",
-    "startTime": "2024-06-24T11:41:35.509Z",
-    "endTime": "2024-06-24T11:41:35.555Z",
+    "command": "nx run-many --target=dev --projects=@study/react-components-*",
+    "startTime": "2024-06-24T12:08:11.338Z",
+    "endTime": "2024-06-24T12:19:08.812Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@study/themes:build",
-      "target": "build",
-      "projectName": "@study/themes",
-      "hash": "749545945152461064",
-      "startTime": "2024-06-24T11:41:35.514Z",
-      "endTime": "2024-06-24T11:41:35.549Z",
+      "taskId": "@study/react-components-layout:dev",
+      "target": "dev",
+      "projectName": "@study/react-components-layout",
+      "hash": "10425274091222640220",
+      "startTime": "2024-06-24T12:08:11.342Z",
+      "endTime": "2024-06-24T12:19:08.812Z",
       "params": "",
-      "cacheStatus": "local-cache-hit",
-      "status": 0
+      "cacheStatus": "cache-miss",
+      "status": 1
     }
   ]
 }
