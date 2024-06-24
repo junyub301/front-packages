@@ -32,23 +32,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "1797353270377212724"
-      },
-      {
-        "file": ".nx/cache/10100591829120946733/code",
-        "hash": "1838281907459330133"
-      },
-      {
-        "file": ".nx/cache/10100591829120946733/source",
-        "hash": "11208802318997815260"
-      },
-      {
-        "file": ".nx/cache/10100591829120946733/terminalOutput",
-        "hash": "18204571200416807063"
-      },
-      {
-        "file": ".nx/cache/10100591829120946733.commit",
-        "hash": "4664556114322093609"
+        "hash": "12949150745981562684"
       },
       {
         "file": ".nx/cache/10690336996078248385/code",
@@ -128,6 +112,22 @@
       },
       {
         "file": ".nx/cache/16103962258539105764.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/3070661098576828911/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/3070661098576828911/source",
+        "hash": "11208802318997815260"
+      },
+      {
+        "file": ".nx/cache/3070661098576828911/terminalOutput",
+        "hash": "3452994588884148078"
+      },
+      {
+        "file": ".nx/cache/3070661098576828911.commit",
         "hash": "4664556114322093609"
       },
       {
@@ -276,31 +276,27 @@
       },
       {
         "file": ".nx/cache/d/server-process.json",
-        "hash": "12678893503792802136"
+        "hash": "3504291885831097654"
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "10472455162817321365"
+        "hash": "11277040906583581192"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "14241815977312466689"
+        "hash": "17917211183327217268"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "1135509746922120915"
+        "hash": "11262415753728779321"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "4076549007476368632"
+        "hash": "5097017087402390444"
       },
       {
         "file": ".nx/cache/run.json",
-        "hash": "2684199508670844234"
-      },
-      {
-        "file": ".nx/cache/terminalOutputs/10100591829120946733",
-        "hash": "18204571200416807063"
+        "hash": "9206791705109506463"
       },
       {
         "file": ".nx/cache/terminalOutputs/1027691855207366999",
@@ -341,6 +337,10 @@
       {
         "file": ".nx/cache/terminalOutputs/2478846879432916787",
         "hash": "9690159821110135935"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3070661098576828911",
+        "hash": "3452994588884148078"
       },
       {
         "file": ".nx/cache/terminalOutputs/3191934474684431132",
@@ -399,32 +399,8 @@
         "hash": "14195432212525958272"
       },
       {
-        "file": ".nx/cache/terminalOutputs/966974630659498395",
-        "hash": "3747925982916847327"
-      },
-      {
         "file": ".nx/cache/terminalOutputs/982797234723011833",
         "hash": "11765824241637476099"
-      },
-      {
-        "file": ".nx/workspace-data/d/server-process.json",
-        "hash": "7365009333520266770"
-      },
-      {
-        "file": ".nx/workspace-data/file-map.json",
-        "hash": "14748078436654116241"
-      },
-      {
-        "file": ".nx/workspace-data/lockfile.hash",
-        "hash": "10542723990618400409"
-      },
-      {
-        "file": ".nx/workspace-data/parsed-lock-file.json",
-        "hash": "17138920149621887318"
-      },
-      {
-        "file": ".nx/workspace-data/project-graph.json",
-        "hash": "14177735712939497810"
       },
       {
         "file": ".prettierrc",
@@ -512,11 +488,11 @@
       },
       {
         "file": "nx.json",
-        "hash": "14255371963109930467"
+        "hash": "4279179279046894397"
       },
       {
         "file": "package.json",
-        "hash": "3509189049064398991"
+        "hash": "6652790752321692775"
       },
       {
         "file": "tsconfig.base.json",
@@ -528,7 +504,7 @@
       },
       {
         "file": "yarn.lock",
-        "hash": "9378957182139830628"
+        "hash": "5955335500943608898"
       }
     ],
     "projectFileMap": {
@@ -539,7 +515,10 @@
         },
         {
           "file": "packages/themes/package.json",
-          "hash": "4799668863449112593"
+          "hash": "4799668863449112593",
+          "deps": [
+            "@study/esbuild-config"
+          ]
         },
         {
           "file": "packages/themes/scripts/build-css-module.js",
@@ -594,6 +573,67 @@
           "hash": "8341753514460594905"
         }
       ],
+      "@study/storybook": [
+        {
+          "file": "services/storybook/.storybook/main.js",
+          "hash": "393018781010083806"
+        },
+        {
+          "file": "services/storybook/.storybook/preview.js",
+          "hash": "695242084102299588"
+        },
+        {
+          "file": "services/storybook/.storybook/style.css",
+          "hash": "16778150682446663494"
+        },
+        {
+          "file": "services/storybook/README.md",
+          "hash": "2624393197388313932"
+        },
+        {
+          "file": "services/storybook/package.json",
+          "hash": "473276518472769653",
+          "deps": [
+            "@study/react-components-layout",
+            "@study/themes"
+          ]
+        },
+        {
+          "file": "services/storybook/stories/ReactComponents/Layout/Block.stories.tsx",
+          "hash": "9911671428447022326"
+        }
+      ],
+      "@study/react-components-layout": [
+        {
+          "file": "packages/react/components/layout/build.js",
+          "hash": "6355399035703559032"
+        },
+        {
+          "file": "packages/react/components/layout/package.json",
+          "hash": "4583413210591771183",
+          "deps": [
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/layout/src/Block.tsx",
+          "hash": "6283701752859410880"
+        },
+        {
+          "file": "packages/react/components/layout/src/block.css.ts",
+          "hash": "8007105642935358322"
+        },
+        {
+          "file": "packages/react/components/layout/src/index.ts",
+          "hash": "11404000772789578234"
+        },
+        {
+          "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "8481322677715247360"
+        }
+      ],
       "@study/esbuild-config": [
         {
           "file": "packages/esbuild-config/README.md",
@@ -606,36 +646,6 @@
         {
           "file": "packages/esbuild-config/package.json",
           "hash": "1059329843381448378"
-        }
-      ],
-      "@study/react-components-layout": [
-        {
-          "file": "packages/react/components/layout/build.js",
-          "hash": "6355399035703559032"
-        },
-        {
-          "file": "packages/react/components/layout/package.json",
-          "hash": "455210081523201767",
-          "deps": [
-            "@study/esbuild-config",
-            "@study/themes"
-          ]
-        },
-        {
-          "file": "packages/react/components/layout/src/Block.tsx",
-          "hash": "6283701752859410880"
-        },
-        {
-          "file": "packages/react/components/layout/src/block.css.ts",
-          "hash": "5218361493665013677"
-        },
-        {
-          "file": "packages/react/components/layout/src/index.ts",
-          "hash": "11404000772789578234"
-        },
-        {
-          "file": "packages/react/components/layout/tsconfig.json",
-          "hash": "8481322677715247360"
         }
       ]
     }
