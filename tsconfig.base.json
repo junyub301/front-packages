@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
         "target": "ESNext",
         "module": "ESNext",
         "lib":["ESNext","DOM"],
