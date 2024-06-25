@@ -1,21 +1,21 @@
 {
   "run": {
-    "command": "nx build @study/themes",
-    "startTime": "2024-06-24T11:41:35.509Z",
-    "endTime": "2024-06-24T11:41:35.555Z",
+    "command": "nx storybook @study/storybook",
+    "startTime": "2024-06-25T13:11:10.220Z",
+    "endTime": "2024-06-25T13:11:47.725Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@study/themes:build",
-      "target": "build",
-      "projectName": "@study/themes",
-      "hash": "749545945152461064",
-      "startTime": "2024-06-24T11:41:35.514Z",
-      "endTime": "2024-06-24T11:41:35.549Z",
+      "taskId": "@study/storybook:storybook",
+      "target": "storybook",
+      "projectName": "@study/storybook",
+      "hash": "2325924513914380306",
+      "startTime": "2024-06-25T13:11:10.224Z",
+      "endTime": "2024-06-25T13:11:47.725Z",
       "params": "",
-      "cacheStatus": "local-cache-hit",
-      "status": 0
+      "cacheStatus": "cache-miss",
+      "status": 1
     }
   ]
 }

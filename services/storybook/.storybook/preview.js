@@ -1,12 +1,14 @@
 import '@study/themes/themes.css'
 import "./style.css"
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i,
+        date: /Date$/,
       },
     },
     rootAttributesTooltip: true,
@@ -28,7 +30,6 @@ const preview = {
     ],
   },
 };
-
 
 const initTheme = () => {
   const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
