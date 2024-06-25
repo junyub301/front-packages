@@ -15,3 +15,6 @@
 **/dist/*
 dist
 *storybook.log
+
+.nx
+.nx/cache/*
