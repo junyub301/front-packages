@@ -171,10 +171,6 @@
           "hash": "9047181986978726691"
         },
         {
-          "file": "packages/react/components/layout/src/layout/Divider.tsx",
-          "hash": "3189766372931724455"
-        },
-        {
           "file": "packages/react/components/layout/src/layout/index.ts",
           "hash": "8560170595730434543"
         },
@@ -209,6 +205,10 @@
         {
           "file": "packages/react/components/layout/tsconfig.json",
           "hash": "8481322677715247360"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/Divider.tsx",
+          "hash": "3189766372931724455"
         }
       ],
       "@study/storybook": [
@@ -241,16 +241,16 @@
           "hash": "229824821550445013"
         },
         {
-          "file": "services/storybook/stories/ReactComponents/Layout/Divider.stories.tsx",
-          "hash": "18204584835278833109"
-        },
-        {
           "file": "services/storybook/stories/ReactComponents/Layout/Heading.stories.tsx",
           "hash": "13993204653621374250"
         },
         {
           "file": "services/storybook/stories/ReactComponents/Layout/Text.stories.tsx",
           "hash": "14655656175374228324"
+        },
+        {
+          "file": "services/storybook/stories/ReactComponents/Layout/Divider.stories.tsx",
+          "hash": "18204584835278833109"
         }
       ],
       "@study/themes": [
