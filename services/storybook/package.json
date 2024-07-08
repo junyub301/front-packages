@@ -11,6 +11,7 @@
     "@storybook/react": "^8.1.10",
     "@storybook/react-vite": "^8.1.10",
     "@storybook/test": "^8.1.10",
+    "@study/react-components-button": "workspace:^",
     "@study/react-components-layout": "workspace:^",
     "@study/themes": "workspace:^",
     "prop-types": "^15.8.1",
