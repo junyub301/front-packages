@@ -1,21 +1,43 @@
 {
   "run": {
-    "command": "nx storybook @study/storybook",
-    "startTime": "2024-07-03T12:20:52.919Z",
-    "endTime": "2024-07-03T13:11:06.385Z",
+    "command": "nx build @study/react-components-layout",
+    "startTime": "2024-07-08T11:55:06.978Z",
+    "endTime": "2024-07-08T11:55:17.286Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@study/storybook:storybook",
-      "target": "storybook",
-      "projectName": "@study/storybook",
-      "hash": "941029752413106987",
-      "startTime": "2024-07-03T12:20:52.923Z",
-      "endTime": "2024-07-03T13:11:06.385Z",
+      "taskId": "@study/esbuild-config:build",
+      "target": "build",
+      "projectName": "@study/esbuild-config",
+      "hash": "8903802846367456147",
+      "startTime": "2024-07-08T11:55:06.983Z",
+      "endTime": "2024-07-08T11:55:07.027Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@study/themes:build",
+      "target": "build",
+      "projectName": "@study/themes",
+      "hash": "12959775767191053368",
+      "startTime": "2024-07-08T11:55:07.033Z",
+      "endTime": "2024-07-08T11:55:07.040Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "@study/react-components-layout:build",
+      "target": "build",
+      "projectName": "@study/react-components-layout",
+      "hash": "4689249372946670156",
+      "startTime": "2024-07-08T11:55:07.046Z",
+      "endTime": "2024-07-08T11:55:17.286Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 1
+      "status": 0
     }
   ]
 }
