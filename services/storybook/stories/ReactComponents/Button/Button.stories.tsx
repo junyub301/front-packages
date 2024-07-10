@@ -1,6 +1,7 @@
 import "@study/react-components-button/style.css";
 import { Button as _Button } from "@study/react-components-button";
 import { vars } from "@study/themes";
+import React from "react";
 
 export default {
   title: "React Components/Button",
@@ -34,8 +35,13 @@ export const ButtonStory = {
     children: "Button",
     variant: "outline",
     isDisabled: true,
+    leftIcon: "🐤",
+    isLoading: false,
   },
   parameters: {
+    backgrounds: {
+      default: "dark",
+    },
     layout: "centered",
   },
 };
