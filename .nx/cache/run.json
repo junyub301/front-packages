@@ -1,32 +1,32 @@
 {
   "run": {
-    "command": "nx build @study/themes",
-    "startTime": "2024-07-10T12:30:40.650Z",
-    "endTime": "2024-07-10T12:30:53.076Z",
+    "command": "nx run-many --target=dev --projects=@study/react-components-*",
+    "startTime": "2024-07-10T12:17:10.414Z",
+    "endTime": "2024-07-10T12:46:16.112Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@study/esbuild-config:build",
-      "target": "build",
-      "projectName": "@study/esbuild-config",
-      "hash": "7993685097295986732",
-      "startTime": "2024-07-10T12:30:40.655Z",
-      "endTime": "2024-07-10T12:30:42.473Z",
+      "taskId": "@study/react-components-layout:dev",
+      "target": "dev",
+      "projectName": "@study/react-components-layout",
+      "hash": "14747194364540685731",
+      "startTime": "2024-07-10T12:17:10.419Z",
+      "endTime": "2024-07-10T12:46:16.109Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 0
+      "status": 1
     },
     {
-      "taskId": "@study/themes:build",
-      "target": "build",
-      "projectName": "@study/themes",
-      "hash": "128449505473457222",
-      "startTime": "2024-07-10T12:30:42.474Z",
-      "endTime": "2024-07-10T12:30:53.075Z",
+      "taskId": "@study/react-components-button:dev",
+      "target": "dev",
+      "projectName": "@study/react-components-button",
+      "hash": "14128338167307867852",
+      "startTime": "2024-07-10T12:17:10.419Z",
+      "endTime": "2024-07-10T12:46:16.112Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 0
+      "status": 1
     }
   ]
 }

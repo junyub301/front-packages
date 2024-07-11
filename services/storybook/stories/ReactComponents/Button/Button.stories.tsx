@@ -1,6 +1,8 @@
 import "@study/react-components-button/style.css";
 import { Button as _Button } from "@study/react-components-button";
+import { Text } from "@study/react-components-layout";
 import { vars } from "@study/themes";
+import { useButton } from "@study/react-hooks-button";
 import React from "react";
 
 export default {
@@ -43,5 +45,29 @@ export const ButtonStory = {
       default: "dark",
     },
     layout: "centered",
+  },
+};
+
+export const TextButtonStory = {
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { buttonProps } = useButton({
+      elementType: "div",
+      onClick: () => {
+        console.log("click");
+      },
+    });
+
+    return (
+      <Text
+        {...buttonProps}
+        as="div"
+        fontSize="md"
+        color="green"
+        style={{ userSelect: "none", cursor: "pointer" }}
+      >
+        텍스트 버튼!
+      </Text>
+    );
   },
 };

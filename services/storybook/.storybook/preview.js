@@ -4,6 +4,7 @@ import "./style.css"
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
+    layout:"centered",
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
