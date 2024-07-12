@@ -22,9 +22,7 @@ const config = {
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("storybook-addon-root-attributes"),
   ],
-  core: {
-    builder: getAbsolutePath('@storybook/builder-vite'), 
-  },
+ 
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
