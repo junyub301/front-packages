@@ -22,7 +22,20 @@ const config = {
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("storybook-addon-root-attributes"),
   ],
+  core: {
+    builder: getAbsolutePath('@storybook/builder-vite'), 
+  },
+  async viteFinal(config) {
+    // Merge custom configuration into the default config
+    const { mergeConfig } = await import('vite');
  
+    return mergeConfig(config, {
+      // Add dependencies to pre-optimization
+      optimizeDeps: {
+        include: ['storybook-dark-mode'],
+      },
+    });
+  },
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
