@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import AccordionContext from "./AccordionContext";
 import { AccordionProps } from "./types";
 import React, { useState } from "react";
-import { accordionStyle } from "./styles.css";
+import { accordionStyle } from "./style.css";
 
 const Accordion = (props: AccordionProps, ref: React.Ref<HTMLDivElement>) => {
   const { defaultActiveItems = [], children, className, ...rest } = props;

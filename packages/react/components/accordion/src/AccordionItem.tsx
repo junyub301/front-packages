@@ -1,7 +1,7 @@
 import React, { Children, cloneElement, isValidElement } from "react";
 import { AccordionItemProps } from "./types";
 import { clsx } from "clsx";
-import { accordionItemStyle } from "./styles.css";
+import { accordionItemStyle } from "./style.css";
 
 const AccordionItem = (
   props: AccordionItemProps,
