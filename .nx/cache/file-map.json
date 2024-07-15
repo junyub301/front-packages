@@ -136,205 +136,10 @@
       },
       {
         "file": "yarn.lock",
-        "hash": "3880044370191977737"
+        "hash": "15436419070567063028"
       }
     ],
     "projectFileMap": {
-      "@study/react-components-layout": [
-        {
-          "file": "packages/react/components/layout/build.js",
-          "hash": "16252997952086185447"
-        },
-        {
-          "file": "packages/react/components/layout/package.json",
-          "hash": "17022594818723432903",
-          "deps": [
-            "@study/esbuild-config",
-            "@study/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/layout/src/core/styles.css.ts",
-          "hash": "14567576232700973214"
-        },
-        {
-          "file": "packages/react/components/layout/src/core/types.ts",
-          "hash": "18209277437042316569"
-        },
-        {
-          "file": "packages/react/components/layout/src/index.ts",
-          "hash": "8621517988113352239"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Box.tsx",
-          "hash": "16601999831277774650"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Divider.tsx",
-          "hash": "15086942496398781279"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Flex.tsx",
-          "hash": "5124162936785398344"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Grid.tsx",
-          "hash": "9479262443662207993"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/GridItem.tsx",
-          "hash": "8225061969589192036"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/List.tsx",
-          "hash": "13532716284986474181"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/ListItem.tsx",
-          "hash": "7740919160086565125"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/OrderedList.tsx",
-          "hash": "2437058305944227471"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/UnOrderedList.tsx",
-          "hash": "17095645328966964637"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/index.ts",
-          "hash": "14159818036712798872"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/types.ts",
-          "hash": "14607438692845838685"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/Heading.tsx",
-          "hash": "17805656250761922285"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/Text.tsx",
-          "hash": "13946903659510709191"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/index.ts",
-          "hash": "462209517168200293"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/style.css.ts",
-          "hash": "10496763905579722229"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/types.ts",
-          "hash": "12376931186284630156"
-        },
-        {
-          "file": "packages/react/components/layout/src/utils/properties.ts",
-          "hash": "5698855879563130366"
-        },
-        {
-          "file": "packages/react/components/layout/tsconfig.json",
-          "hash": "8481322677715247360"
-        }
-      ],
-      "@study/react-hooks-toggle": [
-        {
-          "file": "packages/react/components/hooks/toggle/build.js",
-          "hash": "4805474870462917960"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/package.json",
-          "hash": "16523555946726119529",
-          "deps": [
-            "@study/esbuild-config",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/src/index.ts",
-          "hash": "13190166400749655539"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/src/types.ts",
-          "hash": "13666444803187522029"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/src/useToggle.ts",
-          "hash": "14239154787111631704"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/tsconfig.json",
-          "hash": "18367015080906251936"
-        }
-      ],
-      "@study/react-components-accordion": [
-        {
-          "file": "packages/react/components/accordion/build.js",
-          "hash": "16252997952086185447"
-        },
-        {
-          "file": "packages/react/components/accordion/package.json",
-          "hash": "18168384778295789852",
-          "deps": [
-            "@study/react-hooks-button",
-            "@study/esbuild-config",
-            "@study/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/accordion/src/Accordion.tsx",
-          "hash": "11148547071522784243"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionButton.tsx",
-          "hash": "8978620079742652803"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionContext.tsx",
-          "hash": "16802727246996972943"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionItem.tsx",
-          "hash": "4382716568520512513"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionPanel.tsx",
-          "hash": "2828847068218767964"
-        },
-        {
-          "file": "packages/react/components/accordion/src/index.ts",
-          "hash": "6692487404382574495"
-        },
-        {
-          "file": "packages/react/components/accordion/src/style.css.ts",
-          "hash": "11580445226412020760"
-        },
-        {
-          "file": "packages/react/components/accordion/src/types.ts",
-          "hash": "8195188508654841880"
-        },
-        {
-          "file": "packages/react/components/accordion/tsconfig.json",
-          "hash": "13058542263114430866"
-        }
-      ],
-      "@study/esbuild-config": [
-        {
-          "file": "packages/esbuild-config/README.md",
-          "hash": "6886952344311067916"
-        },
-        {
-          "file": "packages/esbuild-config/index.js",
-          "hash": "17404371993979563223"
-        },
-        {
-          "file": "packages/esbuild-config/package.json",
-          "hash": "1059329843381448378"
-        }
-      ],
       "@study/react-components-button": [
         {
           "file": "packages/react/components/button/build.js",
@@ -456,9 +261,10 @@
         },
         {
           "file": "services/storybook/package.json",
-          "hash": "6230655109731868289",
+          "hash": "5749928471273459617",
           "deps": [
             "@study/react-components-accordion",
+            "@study/react-components-input",
             "@study/react-hooks-button",
             "@study/react-components-button",
             "@study/react-components-layout",
@@ -472,6 +278,10 @@
         {
           "file": "services/storybook/stories/ReactComponents/Button/Button.stories.tsx",
           "hash": "3565163989765296383"
+        },
+        {
+          "file": "services/storybook/stories/ReactComponents/Input/Input.stories.tsx",
+          "hash": "1931053527109329386"
         },
         {
           "file": "services/storybook/stories/ReactComponents/Layout/Box.stories.tsx",
@@ -500,6 +310,51 @@
         {
           "file": "services/storybook/stories/ReactComponents/Layout/Text.stories.tsx",
           "hash": "14655656175374228324"
+        }
+      ],
+      "@study/react-hooks-input": [
+        {
+          "file": "packages/react/components/hooks/input/build.js",
+          "hash": "4805474870462917960"
+        },
+        {
+          "file": "packages/react/components/hooks/input/package.json",
+          "hash": "16844369557855284746",
+          "deps": [
+            "@study/react-hooks-toggle",
+            "@study/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/hooks/input/src/index.ts",
+          "hash": "7663711916905442434"
+        },
+        {
+          "file": "packages/react/components/hooks/input/src/types.ts",
+          "hash": "3112701093904929120"
+        },
+        {
+          "file": "packages/react/components/hooks/input/src/useInput.ts",
+          "hash": "13968062825936123883"
+        },
+        {
+          "file": "packages/react/components/hooks/input/tsconfig.json",
+          "hash": "18367015080906251936"
+        }
+      ],
+      "@study/esbuild-config": [
+        {
+          "file": "packages/esbuild-config/README.md",
+          "hash": "6886952344311067916"
+        },
+        {
+          "file": "packages/esbuild-config/index.js",
+          "hash": "17404371993979563223"
+        },
+        {
+          "file": "packages/esbuild-config/package.json",
+          "hash": "1059329843381448378"
         }
       ],
       "@study/react-hooks-button": [
@@ -535,6 +390,223 @@
         {
           "file": "packages/react/components/hooks/button/tsconfig.json",
           "hash": "18367015080906251936"
+        }
+      ],
+      "@study/react-hooks-toggle": [
+        {
+          "file": "packages/react/components/hooks/toggle/build.js",
+          "hash": "4805474870462917960"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/package.json",
+          "hash": "16523555946726119529",
+          "deps": [
+            "@study/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/src/index.ts",
+          "hash": "13190166400749655539"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/src/types.ts",
+          "hash": "13666444803187522029"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/src/useToggle.ts",
+          "hash": "14239154787111631704"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/tsconfig.json",
+          "hash": "18367015080906251936"
+        }
+      ],
+      "@study/react-components-input": [
+        {
+          "file": "packages/react/components/input/build.js",
+          "hash": "1961804862492589000"
+        },
+        {
+          "file": "packages/react/components/input/package.json",
+          "hash": "5157280637659522080",
+          "deps": [
+            "@study/react-hooks-input",
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/input/src/Input.tsx",
+          "hash": "11725155480105161803"
+        },
+        {
+          "file": "packages/react/components/input/src/index.ts",
+          "hash": "9083214782616530803"
+        },
+        {
+          "file": "packages/react/components/input/src/style.css.ts",
+          "hash": "650203442263205085"
+        },
+        {
+          "file": "packages/react/components/input/src/types.ts",
+          "hash": "1922259004017150482"
+        },
+        {
+          "file": "packages/react/components/input/tsconfig.json",
+          "hash": "8481322677715247360"
+        }
+      ],
+      "@study/react-components-accordion": [
+        {
+          "file": "packages/react/components/accordion/build.js",
+          "hash": "16252997952086185447"
+        },
+        {
+          "file": "packages/react/components/accordion/package.json",
+          "hash": "18168384778295789852",
+          "deps": [
+            "@study/react-hooks-button",
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/accordion/src/Accordion.tsx",
+          "hash": "11148547071522784243"
+        },
+        {
+          "file": "packages/react/components/accordion/src/AccordionButton.tsx",
+          "hash": "8978620079742652803"
+        },
+        {
+          "file": "packages/react/components/accordion/src/AccordionContext.tsx",
+          "hash": "16802727246996972943"
+        },
+        {
+          "file": "packages/react/components/accordion/src/AccordionItem.tsx",
+          "hash": "4382716568520512513"
+        },
+        {
+          "file": "packages/react/components/accordion/src/AccordionPanel.tsx",
+          "hash": "2828847068218767964"
+        },
+        {
+          "file": "packages/react/components/accordion/src/index.ts",
+          "hash": "6692487404382574495"
+        },
+        {
+          "file": "packages/react/components/accordion/src/style.css.ts",
+          "hash": "11580445226412020760"
+        },
+        {
+          "file": "packages/react/components/accordion/src/types.ts",
+          "hash": "8195188508654841880"
+        },
+        {
+          "file": "packages/react/components/accordion/tsconfig.json",
+          "hash": "13058542263114430866"
+        }
+      ],
+      "@study/react-components-layout": [
+        {
+          "file": "packages/react/components/layout/build.js",
+          "hash": "16252997952086185447"
+        },
+        {
+          "file": "packages/react/components/layout/package.json",
+          "hash": "17022594818723432903",
+          "deps": [
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/layout/src/core/styles.css.ts",
+          "hash": "14567576232700973214"
+        },
+        {
+          "file": "packages/react/components/layout/src/core/types.ts",
+          "hash": "18209277437042316569"
+        },
+        {
+          "file": "packages/react/components/layout/src/index.ts",
+          "hash": "8621517988113352239"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/Box.tsx",
+          "hash": "16601999831277774650"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/Divider.tsx",
+          "hash": "15086942496398781279"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/Flex.tsx",
+          "hash": "5124162936785398344"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/Grid.tsx",
+          "hash": "9479262443662207993"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/GridItem.tsx",
+          "hash": "8225061969589192036"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/List.tsx",
+          "hash": "13532716284986474181"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/ListItem.tsx",
+          "hash": "7740919160086565125"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/OrderedList.tsx",
+          "hash": "2437058305944227471"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/UnOrderedList.tsx",
+          "hash": "17095645328966964637"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/index.ts",
+          "hash": "14159818036712798872"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/types.ts",
+          "hash": "14607438692845838685"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/Heading.tsx",
+          "hash": "17805656250761922285"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/Text.tsx",
+          "hash": "13946903659510709191"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/index.ts",
+          "hash": "462209517168200293"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/style.css.ts",
+          "hash": "10496763905579722229"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/types.ts",
+          "hash": "12376931186284630156"
+        },
+        {
+          "file": "packages/react/components/layout/src/utils/properties.ts",
+          "hash": "5698855879563130366"
+        },
+        {
+          "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "8481322677715247360"
         }
       ]
     }
