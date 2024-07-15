@@ -3690,6 +3690,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@study/react-components-input@workspace:^, @study/react-components-input@workspace:packages/react/components/input":
+  version: 0.0.0-use.local
+  resolution: "@study/react-components-input@workspace:packages/react/components/input"
+  dependencies:
+    "@study/esbuild-config": "workspace:^"
+    "@study/react-hooks-input": "workspace:^"
+    "@study/themes": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@vanilla-extract/css": "npm:^1.15.3"
+    "@vanilla-extract/dynamic": "npm:^2.1.1"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.7"
+    "@vanilla-extract/recipes": "npm:^0.5.3"
+    "@vanilla-extract/sprinkles": "npm:^1.6.2"
+    autoprefixer: "npm:^10.4.15"
+    clsx: "npm:^2.1.1"
+    postcss: "npm:^8.4.29"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@study/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@study/react-components-layout@workspace:^, @study/react-components-layout@workspace:packages/react/components/layout":
   version: 0.0.0-use.local
   resolution: "@study/react-components-layout@workspace:packages/react/components/layout"
@@ -3717,6 +3743,23 @@ __metadata:
 "@study/react-hooks-button@workspace:^, @study/react-hooks-button@workspace:packages/react/components/hooks/button":
   version: 0.0.0-use.local
   resolution: "@study/react-hooks-button@workspace:packages/react/components/hooks/button"
+  dependencies:
+    "@study/esbuild-config": "workspace:^"
+    "@study/react-hooks-toggle": "workspace:^"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@study/react-hooks-input@workspace:^, @study/react-hooks-input@workspace:packages/react/components/hooks/input":
+  version: 0.0.0-use.local
+  resolution: "@study/react-hooks-input@workspace:packages/react/components/hooks/input"
   dependencies:
     "@study/esbuild-config": "workspace:^"
     "@study/react-hooks-toggle": "workspace:^"
@@ -3763,6 +3806,7 @@ __metadata:
     "@storybook/test": "npm:^8.1.10"
     "@study/react-components-accordion": "workspace:^"
     "@study/react-components-button": "workspace:^"
+    "@study/react-components-input": "workspace:^"
     "@study/react-components-layout": "workspace:^"
     "@study/react-hooks-button": "workspace:^"
     "@study/themes": "workspace:^"
