@@ -136,18 +136,54 @@
       },
       {
         "file": "yarn.lock",
-        "hash": "15436419070567063028"
+        "hash": "18096487916938089090"
       }
     ],
     "projectFileMap": {
-      "@study/react-components-button": [
+      "@study/react-components-select": [
         {
-          "file": "packages/react/components/button/build.js",
+          "file": "packages/react/components/select/build.js",
+          "hash": "1961804862492589000"
+        },
+        {
+          "file": "packages/react/components/select/package.json",
+          "hash": "13917427178120403857",
+          "deps": [
+            "@study/react-hooks-select",
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/select/src/Select.tsx",
+          "hash": "2179976766809864149"
+        },
+        {
+          "file": "packages/react/components/select/src/index.ts",
+          "hash": "9141684243305184125"
+        },
+        {
+          "file": "packages/react/components/select/src/style.css.ts",
+          "hash": "11648693048394180383"
+        },
+        {
+          "file": "packages/react/components/select/src/types.ts",
+          "hash": "3075614343476035611"
+        },
+        {
+          "file": "packages/react/components/select/tsconfig.json",
+          "hash": "8481322677715247360"
+        }
+      ],
+      "@study/react-components-accordion": [
+        {
+          "file": "packages/react/components/accordion/build.js",
           "hash": "16252997952086185447"
         },
         {
-          "file": "packages/react/components/button/package.json",
-          "hash": "9016843763163829287",
+          "file": "packages/react/components/accordion/package.json",
+          "hash": "18168384778295789852",
           "deps": [
             "@study/react-hooks-button",
             "@study/esbuild-config",
@@ -156,24 +192,40 @@
           ]
         },
         {
-          "file": "packages/react/components/button/src/Button.tsx",
-          "hash": "10291953445099749399"
+          "file": "packages/react/components/accordion/src/Accordion.tsx",
+          "hash": "11148547071522784243"
         },
         {
-          "file": "packages/react/components/button/src/index.ts",
-          "hash": "8409040364927157818"
+          "file": "packages/react/components/accordion/src/AccordionButton.tsx",
+          "hash": "8978620079742652803"
         },
         {
-          "file": "packages/react/components/button/src/style.css.ts",
-          "hash": "7615072151131972742"
+          "file": "packages/react/components/accordion/src/AccordionContext.tsx",
+          "hash": "16802727246996972943"
         },
         {
-          "file": "packages/react/components/button/src/types.ts",
-          "hash": "12431548574417133578"
+          "file": "packages/react/components/accordion/src/AccordionItem.tsx",
+          "hash": "4382716568520512513"
         },
         {
-          "file": "packages/react/components/button/tsconfig.json",
-          "hash": "8481322677715247360"
+          "file": "packages/react/components/accordion/src/AccordionPanel.tsx",
+          "hash": "2828847068218767964"
+        },
+        {
+          "file": "packages/react/components/accordion/src/index.ts",
+          "hash": "6692487404382574495"
+        },
+        {
+          "file": "packages/react/components/accordion/src/style.css.ts",
+          "hash": "11580445226412020760"
+        },
+        {
+          "file": "packages/react/components/accordion/src/types.ts",
+          "hash": "8195188508654841880"
+        },
+        {
+          "file": "packages/react/components/accordion/tsconfig.json",
+          "hash": "13058542263114430866"
         }
       ],
       "@study/themes": [
@@ -242,6 +294,41 @@
           "hash": "8341753514460594905"
         }
       ],
+      "@study/react-hooks-button": [
+        {
+          "file": "packages/react/components/hooks/button/build.js",
+          "hash": "4805474870462917960"
+        },
+        {
+          "file": "packages/react/components/hooks/button/package.json",
+          "hash": "13487128781732817672",
+          "deps": [
+            "@study/react-hooks-toggle",
+            "@study/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/hooks/button/src/index.ts",
+          "hash": "10535575191923847207"
+        },
+        {
+          "file": "packages/react/components/hooks/button/src/types.ts",
+          "hash": "4136342761415921661"
+        },
+        {
+          "file": "packages/react/components/hooks/button/src/useButton.tsx",
+          "hash": "1445168594371258735"
+        },
+        {
+          "file": "packages/react/components/hooks/button/src/useToggleButton.ts",
+          "hash": "14068577357624515188"
+        },
+        {
+          "file": "packages/react/components/hooks/button/tsconfig.json",
+          "hash": "18367015080906251936"
+        }
+      ],
       "@study/storybook": [
         {
           "file": "services/storybook/.storybook/main.js",
@@ -261,10 +348,11 @@
         },
         {
           "file": "services/storybook/package.json",
-          "hash": "5749928471273459617",
+          "hash": "11960497243956942838",
           "deps": [
             "@study/react-components-accordion",
             "@study/react-components-input",
+            "@study/react-components-select",
             "@study/react-hooks-button",
             "@study/react-components-button",
             "@study/react-components-layout",
@@ -310,204 +398,10 @@
         {
           "file": "services/storybook/stories/ReactComponents/Layout/Text.stories.tsx",
           "hash": "14655656175374228324"
-        }
-      ],
-      "@study/react-hooks-input": [
-        {
-          "file": "packages/react/components/hooks/input/build.js",
-          "hash": "4805474870462917960"
         },
         {
-          "file": "packages/react/components/hooks/input/package.json",
-          "hash": "16844369557855284746",
-          "deps": [
-            "@study/react-hooks-toggle",
-            "@study/esbuild-config",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/hooks/input/src/index.ts",
-          "hash": "7663711916905442434"
-        },
-        {
-          "file": "packages/react/components/hooks/input/src/types.ts",
-          "hash": "3112701093904929120"
-        },
-        {
-          "file": "packages/react/components/hooks/input/src/useInput.ts",
-          "hash": "13968062825936123883"
-        },
-        {
-          "file": "packages/react/components/hooks/input/tsconfig.json",
-          "hash": "18367015080906251936"
-        }
-      ],
-      "@study/esbuild-config": [
-        {
-          "file": "packages/esbuild-config/README.md",
-          "hash": "6886952344311067916"
-        },
-        {
-          "file": "packages/esbuild-config/index.js",
-          "hash": "17404371993979563223"
-        },
-        {
-          "file": "packages/esbuild-config/package.json",
-          "hash": "1059329843381448378"
-        }
-      ],
-      "@study/react-hooks-button": [
-        {
-          "file": "packages/react/components/hooks/button/build.js",
-          "hash": "4805474870462917960"
-        },
-        {
-          "file": "packages/react/components/hooks/button/package.json",
-          "hash": "13487128781732817672",
-          "deps": [
-            "@study/react-hooks-toggle",
-            "@study/esbuild-config",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/hooks/button/src/index.ts",
-          "hash": "10535575191923847207"
-        },
-        {
-          "file": "packages/react/components/hooks/button/src/types.ts",
-          "hash": "4136342761415921661"
-        },
-        {
-          "file": "packages/react/components/hooks/button/src/useButton.tsx",
-          "hash": "1445168594371258735"
-        },
-        {
-          "file": "packages/react/components/hooks/button/src/useToggleButton.ts",
-          "hash": "14068577357624515188"
-        },
-        {
-          "file": "packages/react/components/hooks/button/tsconfig.json",
-          "hash": "18367015080906251936"
-        }
-      ],
-      "@study/react-hooks-toggle": [
-        {
-          "file": "packages/react/components/hooks/toggle/build.js",
-          "hash": "4805474870462917960"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/package.json",
-          "hash": "16523555946726119529",
-          "deps": [
-            "@study/esbuild-config",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/src/index.ts",
-          "hash": "13190166400749655539"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/src/types.ts",
-          "hash": "13666444803187522029"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/src/useToggle.ts",
-          "hash": "14239154787111631704"
-        },
-        {
-          "file": "packages/react/components/hooks/toggle/tsconfig.json",
-          "hash": "18367015080906251936"
-        }
-      ],
-      "@study/react-components-input": [
-        {
-          "file": "packages/react/components/input/build.js",
-          "hash": "1961804862492589000"
-        },
-        {
-          "file": "packages/react/components/input/package.json",
-          "hash": "5157280637659522080",
-          "deps": [
-            "@study/react-hooks-input",
-            "@study/esbuild-config",
-            "@study/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/input/src/Input.tsx",
-          "hash": "11725155480105161803"
-        },
-        {
-          "file": "packages/react/components/input/src/index.ts",
-          "hash": "9083214782616530803"
-        },
-        {
-          "file": "packages/react/components/input/src/style.css.ts",
-          "hash": "650203442263205085"
-        },
-        {
-          "file": "packages/react/components/input/src/types.ts",
-          "hash": "1922259004017150482"
-        },
-        {
-          "file": "packages/react/components/input/tsconfig.json",
-          "hash": "8481322677715247360"
-        }
-      ],
-      "@study/react-components-accordion": [
-        {
-          "file": "packages/react/components/accordion/build.js",
-          "hash": "16252997952086185447"
-        },
-        {
-          "file": "packages/react/components/accordion/package.json",
-          "hash": "18168384778295789852",
-          "deps": [
-            "@study/react-hooks-button",
-            "@study/esbuild-config",
-            "@study/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/accordion/src/Accordion.tsx",
-          "hash": "11148547071522784243"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionButton.tsx",
-          "hash": "8978620079742652803"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionContext.tsx",
-          "hash": "16802727246996972943"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionItem.tsx",
-          "hash": "4382716568520512513"
-        },
-        {
-          "file": "packages/react/components/accordion/src/AccordionPanel.tsx",
-          "hash": "2828847068218767964"
-        },
-        {
-          "file": "packages/react/components/accordion/src/index.ts",
-          "hash": "6692487404382574495"
-        },
-        {
-          "file": "packages/react/components/accordion/src/style.css.ts",
-          "hash": "11580445226412020760"
-        },
-        {
-          "file": "packages/react/components/accordion/src/types.ts",
-          "hash": "8195188508654841880"
-        },
-        {
-          "file": "packages/react/components/accordion/tsconfig.json",
-          "hash": "13058542263114430866"
+          "file": "services/storybook/stories/ReactComponents/Select/Select.stories.tsx",
+          "hash": "6623031539119964446"
         }
       ],
       "@study/react-components-layout": [
@@ -606,6 +500,182 @@
         },
         {
           "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "8481322677715247360"
+        }
+      ],
+      "@study/react-hooks-toggle": [
+        {
+          "file": "packages/react/components/hooks/toggle/build.js",
+          "hash": "4805474870462917960"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/package.json",
+          "hash": "16523555946726119529",
+          "deps": [
+            "@study/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/src/index.ts",
+          "hash": "13190166400749655539"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/src/types.ts",
+          "hash": "13666444803187522029"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/src/useToggle.ts",
+          "hash": "14239154787111631704"
+        },
+        {
+          "file": "packages/react/components/hooks/toggle/tsconfig.json",
+          "hash": "18367015080906251936"
+        }
+      ],
+      "@study/react-components-button": [
+        {
+          "file": "packages/react/components/button/build.js",
+          "hash": "16252997952086185447"
+        },
+        {
+          "file": "packages/react/components/button/package.json",
+          "hash": "9016843763163829287",
+          "deps": [
+            "@study/react-hooks-button",
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/button/src/Button.tsx",
+          "hash": "10291953445099749399"
+        },
+        {
+          "file": "packages/react/components/button/src/index.ts",
+          "hash": "8409040364927157818"
+        },
+        {
+          "file": "packages/react/components/button/src/style.css.ts",
+          "hash": "7615072151131972742"
+        },
+        {
+          "file": "packages/react/components/button/src/types.ts",
+          "hash": "12431548574417133578"
+        },
+        {
+          "file": "packages/react/components/button/tsconfig.json",
+          "hash": "8481322677715247360"
+        }
+      ],
+      "@study/react-hooks-select": [
+        {
+          "file": "packages/react/components/hooks/select/build.js",
+          "hash": "4805474870462917960"
+        },
+        {
+          "file": "packages/react/components/hooks/select/package.json",
+          "hash": "13922840325768378222",
+          "deps": [
+            "@study/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/hooks/select/src/index.ts",
+          "hash": "5223736269965586498"
+        },
+        {
+          "file": "packages/react/components/hooks/select/src/types.ts",
+          "hash": "3698533023306847201"
+        },
+        {
+          "file": "packages/react/components/hooks/select/src/useSelect.ts",
+          "hash": "10272838170998038664"
+        },
+        {
+          "file": "packages/react/components/hooks/select/tsconfig.json",
+          "hash": "18367015080906251936"
+        }
+      ],
+      "@study/react-hooks-input": [
+        {
+          "file": "packages/react/components/hooks/input/build.js",
+          "hash": "4805474870462917960"
+        },
+        {
+          "file": "packages/react/components/hooks/input/package.json",
+          "hash": "11744847213182130743",
+          "deps": [
+            "@study/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/hooks/input/src/index.ts",
+          "hash": "7663711916905442434"
+        },
+        {
+          "file": "packages/react/components/hooks/input/src/types.ts",
+          "hash": "3112701093904929120"
+        },
+        {
+          "file": "packages/react/components/hooks/input/src/useInput.ts",
+          "hash": "13968062825936123883"
+        },
+        {
+          "file": "packages/react/components/hooks/input/tsconfig.json",
+          "hash": "18367015080906251936"
+        }
+      ],
+      "@study/esbuild-config": [
+        {
+          "file": "packages/esbuild-config/README.md",
+          "hash": "6886952344311067916"
+        },
+        {
+          "file": "packages/esbuild-config/index.js",
+          "hash": "17404371993979563223"
+        },
+        {
+          "file": "packages/esbuild-config/package.json",
+          "hash": "1059329843381448378"
+        }
+      ],
+      "@study/react-components-input": [
+        {
+          "file": "packages/react/components/input/build.js",
+          "hash": "1961804862492589000"
+        },
+        {
+          "file": "packages/react/components/input/package.json",
+          "hash": "5157280637659522080",
+          "deps": [
+            "@study/react-hooks-input",
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/input/src/Input.tsx",
+          "hash": "11725155480105161803"
+        },
+        {
+          "file": "packages/react/components/input/src/index.ts",
+          "hash": "9083214782616530803"
+        },
+        {
+          "file": "packages/react/components/input/src/style.css.ts",
+          "hash": "650203442263205085"
+        },
+        {
+          "file": "packages/react/components/input/src/types.ts",
+          "hash": "1922259004017150482"
+        },
+        {
+          "file": "packages/react/components/input/tsconfig.json",
           "hash": "8481322677715247360"
         }
       ]

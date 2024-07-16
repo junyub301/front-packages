@@ -29,6 +29,7 @@
   "dependencies": {
     "@study/react-components-accordion": "workspace:^",
     "@study/react-components-input": "workspace:^",
+    "@study/react-components-select": "workspace:^",
     "@study/react-hooks-button": "workspace:^"
   }
 }
