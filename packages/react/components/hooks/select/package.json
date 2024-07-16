@@ -1,5 +1,5 @@
 {
-  "name": "@study/react-hooks-input",
+  "name": "@study/react-hooks-select",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
