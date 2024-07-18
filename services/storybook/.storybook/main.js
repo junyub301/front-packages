@@ -21,6 +21,8 @@ const config = {
     getAbsolutePath("@chromatic-com/storybook"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("storybook-addon-root-attributes"),
+    getAbsolutePath("@storybook/addon-a11y"),
+    getAbsolutePath("storybook-addon-pseudo-states"),
   ],
   core: {
     builder: getAbsolutePath('@storybook/builder-vite'), 
