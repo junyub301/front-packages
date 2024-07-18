@@ -2700,6 +2700,15 @@
         "hash": "10c0/69ee906f3125fb2c6bb6ec5cdd84e8827d93b49b3892bce8b62267116cc7e197b5cccf20c160a1d32c26014ecd14470a72a5e3ee37a58f1d6dadc0db1ccf3894"
       }
     },
+    "npm:@storybook/addon-a11y@8.2.4": {
+      "type": "npm",
+      "name": "npm:@storybook/addon-a11y@8.2.4",
+      "data": {
+        "version": "8.2.4",
+        "packageName": "@storybook/addon-a11y",
+        "hash": "10c0/66fe3b7541a5870c2465768abc02515f41fc9980831b0d8a2a8c71dfe5bbc7757c4a4918f474350305b178b2436534bb85a27deec46a2ca0ecaa6b358343548c"
+      }
+    },
     "npm:@storybook/addon-actions@8.1.10": {
       "type": "npm",
       "name": "npm:@storybook/addon-actions@8.1.10",
@@ -2752,6 +2761,15 @@
         "version": "8.1.10",
         "packageName": "@storybook/addon-highlight",
         "hash": "10c0/9691fcab6b2d11c0f385cd14bf3da37536db28cf8301b2e6f464481ad8ddfb01f3ce484a59905e3539864ad4e6016a83964772ac4837d92bdaa1e1e1a93c7a52"
+      }
+    },
+    "npm:@storybook/addon-highlight@8.2.4": {
+      "type": "npm",
+      "name": "npm:@storybook/addon-highlight@8.2.4",
+      "data": {
+        "version": "8.2.4",
+        "packageName": "@storybook/addon-highlight",
+        "hash": "10c0/89cab5a1f4b7028577ee9b3f333f3e791e7a3a250097ef716bcdd06abd900234221807a98189588bc678f074e2e1155b82bcc5e4eb49ad1a9a4650b5b95f2ec1"
       }
     },
     "npm:@storybook/addon-interactions@8.1.10": {
@@ -4237,6 +4255,15 @@
         "version": "4.7.0",
         "packageName": "axe-core",
         "hash": "10c0/89ac5712b5932ac7d23398b4cb5ba081c394a086e343acc68ba49c83472706e18e0799804e8388c779dcdacc465377deb29f2714241d3fbb389cf3a6b275c9ba"
+      }
+    },
+    "npm:axe-core@4.9.1": {
+      "type": "npm",
+      "name": "npm:axe-core@4.9.1",
+      "data": {
+        "version": "4.9.1",
+        "packageName": "axe-core",
+        "hash": "10c0/ac9e5a0c6fa115a43ebffc32a1d2189e1ca6431b5a78e88cdcf94a72a25c5964185682edd94fe6bdb1cb4266c0d06301b022866e0e50dcdf6e3cefe556470110"
       }
     },
     "npm:axios@1.7.2": {
@@ -13627,6 +13654,16 @@
       "type": "static"
     },
     {
+      "source": "npm:@storybook/addon-a11y@8.2.4",
+      "target": "npm:@storybook/addon-highlight@8.2.4",
+      "type": "static"
+    },
+    {
+      "source": "npm:@storybook/addon-a11y@8.2.4",
+      "target": "npm:axe-core@4.9.1",
+      "type": "static"
+    },
+    {
       "source": "npm:@storybook/addon-actions@8.1.10",
       "target": "npm:@storybook/core-events@8.1.10",
       "type": "static"
@@ -13863,6 +13900,11 @@
     },
     {
       "source": "npm:@storybook/addon-highlight@8.1.10",
+      "target": "npm:@storybook/global@5.0.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@storybook/addon-highlight@8.2.4",
       "target": "npm:@storybook/global@5.0.0",
       "type": "static"
     },
