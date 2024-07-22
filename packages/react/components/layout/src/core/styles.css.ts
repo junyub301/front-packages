@@ -3,7 +3,10 @@ import { style } from "@vanilla-extract/css";
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
 export const BaseStyle = style({
-  //@ts-ignore
+  padding: 0,
+  margin: 0,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-expect-error
   "&:focus-visible": {
     outline: "none",
     boxShadow: vars.box.shadows.outline,
