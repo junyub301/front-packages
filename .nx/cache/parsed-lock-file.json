@@ -4590,6 +4590,15 @@
         "hash": "10c0/39843e6e2d56fc041fa9163bea677e3b19657d08128c4366a71b9b312b7b1a879d21b248a8cad46fbc9899085143c3d72ed2bb62a3b49a20f22dae7a03d46172"
       }
     },
+    "npm:chromatic@11.5.5": {
+      "type": "npm",
+      "name": "npm:chromatic@11.5.5",
+      "data": {
+        "version": "11.5.5",
+        "packageName": "chromatic",
+        "hash": "10c0/3d812122548f9c29ab7116f7054e03cbf523b30ddde7e3142017cd23c42b6b99b3023e0146ef3afcfe4245a8cbb2ed97cedecca4e2cf9e5f6e8666db84a827d4"
+      }
+    },
     "npm:citty@0.1.6": {
       "type": "npm",
       "name": "npm:citty@0.1.6",
@@ -9484,6 +9493,15 @@
         "version": "2.14.3",
         "packageName": "store2",
         "hash": "10c0/22e1096e6d69590672ca0b7f891d82b060837ef4c3e5df0d4563e6cbed14c52ddf2589fa94b79f4311b6ec41d95d6142e5d01d194539e0175c3fb4090cca8244"
+      }
+    },
+    "npm:storybook-addon-pseudo-states@3.1.1": {
+      "type": "npm",
+      "name": "npm:storybook-addon-pseudo-states@3.1.1",
+      "data": {
+        "version": "3.1.1",
+        "packageName": "storybook-addon-pseudo-states",
+        "hash": "10c0/ed70ebacee76f433482e44a12e0e29d3f048ae8ef4fab7f02edd348b5a9917003e2626d78f3f86654ab6abb60a153370ae0fa6577d1a12805e2a1fec2bb1ec74"
       }
     },
     "npm:storybook-addon-root-attributes@2.1.3": {
