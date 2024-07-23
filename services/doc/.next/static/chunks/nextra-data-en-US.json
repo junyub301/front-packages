@@ -1,0 +1,1 @@
+{"/themes/installation":{"title":"Installation","data":{"":"yarn add @study/themes"}},"/hooks":{"title":"@study/react-hooks 소개","data":{"":"@study/react-hooks는 hooks를 제공하고 있습니다.\nStyle을 제외한 기능만 사용을 원할 경우 hooks를 설치하여 사용하시면 됩니다."}},"/":{"title":"Study Design System","data":{"":"Study Design System은 theme과 React UI Library로 구성되어 있습니다."}}}
