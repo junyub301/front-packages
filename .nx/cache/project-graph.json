@@ -60,13 +60,13 @@
         "tags": []
       }
     },
-    "@study/react-hooks-toggle": {
-      "name": "@study/react-hooks-toggle",
+    "@study/react-hooks-select": {
+      "name": "@study/react-hooks-select",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/hooks/toggle",
-        "sourceRoot": "packages/react/components/hooks/toggle",
-        "name": "@study/react-hooks-toggle",
+        "root": "packages/react/components/hooks/select",
+        "sourceRoot": "packages/react/components/hooks/select",
+        "name": "@study/react-hooks-select",
         "projectType": "library",
         "targets": {
           "build": {
@@ -120,13 +120,13 @@
         "tags": []
       }
     },
-    "@study/react-hooks-select": {
-      "name": "@study/react-hooks-select",
+    "@study/react-hooks-toggle": {
+      "name": "@study/react-hooks-toggle",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/hooks/select",
-        "sourceRoot": "packages/react/components/hooks/select",
-        "name": "@study/react-hooks-select",
+        "root": "packages/react/components/hooks/toggle",
+        "sourceRoot": "packages/react/components/hooks/toggle",
+        "name": "@study/react-hooks-toggle",
         "projectType": "library",
         "targets": {
           "build": {
@@ -300,13 +300,13 @@
         "tags": []
       }
     },
-    "@study/react-components-button": {
-      "name": "@study/react-components-button",
+    "@study/react-components-select": {
+      "name": "@study/react-components-select",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/button",
-        "sourceRoot": "packages/react/components/button",
-        "name": "@study/react-components-button",
+        "root": "packages/react/components/select",
+        "sourceRoot": "packages/react/components/select",
+        "name": "@study/react-components-select",
         "projectType": "library",
         "targets": {
           "build": {
@@ -360,13 +360,13 @@
         "tags": []
       }
     },
-    "@study/react-components-select": {
-      "name": "@study/react-components-select",
+    "@study/react-components-button": {
+      "name": "@study/react-components-button",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/select",
-        "sourceRoot": "packages/react/components/select",
-        "name": "@study/react-components-select",
+        "root": "packages/react/components/button",
+        "sourceRoot": "packages/react/components/button",
+        "name": "@study/react-components-button",
         "projectType": "library",
         "targets": {
           "build": {
@@ -480,13 +480,13 @@
         "tags": []
       }
     },
-    "@study/react-components-toast": {
-      "name": "@study/react-components-toast",
+    "@study/react-components-input": {
+      "name": "@study/react-components-input",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/toast",
-        "sourceRoot": "packages/react/components/toast",
-        "name": "@study/react-components-toast",
+        "root": "packages/react/components/input",
+        "sourceRoot": "packages/react/components/input",
+        "name": "@study/react-components-input",
         "projectType": "library",
         "targets": {
           "build": {
@@ -540,13 +540,13 @@
         "tags": []
       }
     },
-    "@study/react-components-input": {
-      "name": "@study/react-components-input",
+    "@study/react-components-toast": {
+      "name": "@study/react-components-toast",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/input",
-        "sourceRoot": "packages/react/components/input",
-        "name": "@study/react-components-input",
+        "root": "packages/react/components/toast",
+        "sourceRoot": "packages/react/components/toast",
+        "name": "@study/react-components-toast",
         "projectType": "library",
         "targets": {
           "build": {
@@ -14371,18 +14371,6 @@
         "type": "static"
       }
     ],
-    "@study/react-hooks-toggle": [
-      {
-        "source": "@study/react-hooks-toggle",
-        "target": "@study/esbuild-config",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-hooks-toggle",
-        "target": "npm:typescript",
-        "type": "static"
-      }
-    ],
     "@study/react-hooks-select": [
       {
         "source": "@study/react-hooks-select",
@@ -14391,6 +14379,18 @@
       },
       {
         "source": "@study/react-hooks-select",
+        "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
+    "@study/react-hooks-toggle": [
+      {
+        "source": "@study/react-hooks-toggle",
+        "target": "@study/esbuild-config",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-hooks-toggle",
         "target": "npm:typescript",
         "type": "static"
       }
@@ -14429,28 +14429,6 @@
         "type": "static"
       }
     ],
-    "@study/react-components-button": [
-      {
-        "source": "@study/react-components-button",
-        "target": "@study/react-hooks-button",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-button",
-        "target": "@study/esbuild-config",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-button",
-        "target": "@study/themes",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-button",
-        "target": "npm:typescript",
-        "type": "static"
-      }
-    ],
     "@study/react-components-select": [
       {
         "source": "@study/react-components-select",
@@ -14473,6 +14451,28 @@
         "type": "static"
       }
     ],
+    "@study/react-components-button": [
+      {
+        "source": "@study/react-components-button",
+        "target": "@study/react-hooks-button",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-button",
+        "target": "@study/esbuild-config",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-button",
+        "target": "@study/themes",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-button",
+        "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
     "@study/react-components-layout": [
       {
         "source": "@study/react-components-layout",
@@ -14486,23 +14486,6 @@
       },
       {
         "source": "@study/react-components-layout",
-        "target": "npm:typescript",
-        "type": "static"
-      }
-    ],
-    "@study/react-components-toast": [
-      {
-        "source": "@study/react-components-toast",
-        "target": "@study/esbuild-config",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-toast",
-        "target": "@study/themes",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-toast",
         "target": "npm:typescript",
         "type": "static"
       }
@@ -14525,6 +14508,23 @@
       },
       {
         "source": "@study/react-components-input",
+        "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
+    "@study/react-components-toast": [
+      {
+        "source": "@study/react-components-toast",
+        "target": "@study/esbuild-config",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-toast",
+        "target": "@study/themes",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-toast",
         "target": "npm:typescript",
         "type": "static"
       }
