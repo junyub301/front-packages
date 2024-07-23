@@ -18,3 +18,14 @@ dist
 
 .nx
 .nx/cache/*
+
+
+# storybook
+**/storybook-static/
+
+# next.js
+**/.next/
+**/out/
+
+# production
+**/build
