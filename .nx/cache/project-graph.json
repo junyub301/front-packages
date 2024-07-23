@@ -1,65 +1,5 @@
 {
   "nodes": {
-    "@study/react-hooks-select": {
-      "name": "@study/react-hooks-select",
-      "type": "lib",
-      "data": {
-        "root": "packages/react/components/hooks/select",
-        "sourceRoot": "packages/react/components/hooks/select",
-        "name": "@study/react-hooks-select",
-        "projectType": "library",
-        "targets": {
-          "build": {
-            "dependsOn": [
-              "^build"
-            ],
-            "executor": "nx:run-script",
-            "options": {
-              "script": "build"
-            },
-            "configurations": {}
-          },
-          "build:js": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "build:js"
-            },
-            "configurations": {}
-          },
-          "build:type": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "build:type"
-            },
-            "configurations": {}
-          },
-          "clean": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "clean"
-            },
-            "configurations": {}
-          },
-          "dev": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "dev"
-            },
-            "configurations": {}
-          },
-          "nx-release-publish": {
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
-            "executor": "@nx/js:release-publish",
-            "options": {},
-            "configurations": {}
-          }
-        },
-        "implicitDependencies": [],
-        "tags": []
-      }
-    },
     "@study/react-hooks-button": {
       "name": "@study/react-hooks-button",
       "type": "lib",
@@ -127,6 +67,66 @@
         "root": "packages/react/components/hooks/toggle",
         "sourceRoot": "packages/react/components/hooks/toggle",
         "name": "@study/react-hooks-toggle",
+        "projectType": "library",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "configurations": {}
+          },
+          "build:js": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:js"
+            },
+            "configurations": {}
+          },
+          "build:type": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:type"
+            },
+            "configurations": {}
+          },
+          "clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "clean"
+            },
+            "configurations": {}
+          },
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "configurations": {}
+          },
+          "nx-release-publish": {
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "executor": "@nx/js:release-publish",
+            "options": {},
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "@study/react-hooks-select": {
+      "name": "@study/react-hooks-select",
+      "type": "lib",
+      "data": {
+        "root": "packages/react/components/hooks/select",
+        "sourceRoot": "packages/react/components/hooks/select",
+        "name": "@study/react-hooks-select",
         "projectType": "library",
         "targets": {
           "build": {
@@ -480,13 +480,13 @@
         "tags": []
       }
     },
-    "@study/react-components-input": {
-      "name": "@study/react-components-input",
+    "@study/react-components-toast": {
+      "name": "@study/react-components-toast",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/input",
-        "sourceRoot": "packages/react/components/input",
-        "name": "@study/react-components-input",
+        "root": "packages/react/components/toast",
+        "sourceRoot": "packages/react/components/toast",
+        "name": "@study/react-components-toast",
         "projectType": "library",
         "targets": {
           "build": {
@@ -540,13 +540,13 @@
         "tags": []
       }
     },
-    "@study/react-components-toast": {
-      "name": "@study/react-components-toast",
+    "@study/react-components-input": {
+      "name": "@study/react-components-input",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/toast",
-        "sourceRoot": "packages/react/components/toast",
-        "name": "@study/react-components-toast",
+        "root": "packages/react/components/input",
+        "sourceRoot": "packages/react/components/input",
+        "name": "@study/react-components-input",
         "projectType": "library",
         "targets": {
           "build": {
@@ -14354,18 +14354,6 @@
     }
   },
   "dependencies": {
-    "@study/react-hooks-select": [
-      {
-        "source": "@study/react-hooks-select",
-        "target": "@study/esbuild-config",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-hooks-select",
-        "target": "npm:typescript",
-        "type": "static"
-      }
-    ],
     "@study/react-hooks-button": [
       {
         "source": "@study/react-hooks-button",
@@ -14391,6 +14379,18 @@
       },
       {
         "source": "@study/react-hooks-toggle",
+        "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
+    "@study/react-hooks-select": [
+      {
+        "source": "@study/react-hooks-select",
+        "target": "@study/esbuild-config",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-hooks-select",
         "target": "npm:typescript",
         "type": "static"
       }
@@ -14490,6 +14490,23 @@
         "type": "static"
       }
     ],
+    "@study/react-components-toast": [
+      {
+        "source": "@study/react-components-toast",
+        "target": "@study/esbuild-config",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-toast",
+        "target": "@study/themes",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-toast",
+        "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
     "@study/react-components-input": [
       {
         "source": "@study/react-components-input",
@@ -14508,23 +14525,6 @@
       },
       {
         "source": "@study/react-components-input",
-        "target": "npm:typescript",
-        "type": "static"
-      }
-    ],
-    "@study/react-components-toast": [
-      {
-        "source": "@study/react-components-toast",
-        "target": "@study/esbuild-config",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-toast",
-        "target": "@study/themes",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-toast",
         "target": "npm:typescript",
         "type": "static"
       }
