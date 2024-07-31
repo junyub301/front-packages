@@ -25,6 +25,7 @@ const PlaygroundPage = () => {
           backgroundColor: "#FFD951",
         }}
       />
+
       <SpacingSlice
         sliceStyle={{
           backgroundColor: vars.colors.$static.light.color.black,
@@ -51,7 +52,7 @@ const PlaygroundPage = () => {
         }}
       />
       <TextSlice
-        text={`100일간 내 마음대로 무제한 수강 가능한\n카테고리별 BEST 강의 라인업을 아래에서 확인해보세요.`}
+        text={`원하는 강의 골라 결제 시 100원 만 더 내면 이 모든 혜택을 들립니다!`}
         sliceStyle={{
           textSize: 14,
           textColor: vars.colors.$static.light.color.white,
@@ -64,6 +65,63 @@ const PlaygroundPage = () => {
         sliceStyle={{
           paddingX: 8,
           backgroundColor: vars.colors.$static.light.color.black,
+        }}
+      />
+
+      <SpacingSlice
+        sliceStyle={{
+          backgroundColor: vars.colors.$scale.gray[900],
+          height: 60,
+        }}
+      />
+      <TextSlice
+        text={`100원에 만나볼 수 있는\n BEST 강의 라인업`}
+        highlightTexts={["BEST 강의"]}
+        sliceStyle={{
+          textWeight: 700,
+          textSize: 24,
+          textColor: vars.colors.$static.light.color.white,
+          backgroundColor: vars.colors.$scale.gray[900],
+          highlightTextColor: "#FFD64B",
+        }}
+      />
+      <TextSlice
+        text={`100일간 내 마음대로 무제한 수강 가능한\n카테고리별 BEST 강의 라인업을 아래에서 확인해보세요.`}
+        sliceStyle={{
+          textSize: 14,
+          textColor: vars.colors.$static.light.color.white,
+          backgroundColor: vars.colors.$scale.gray[900],
+        }}
+      />
+      <SpacingSlice
+        sliceStyle={{
+          backgroundColor: vars.colors.$scale.gray[900],
+          height: 32,
+        }}
+      />
+      <TextSlice
+        text={`🖥️ 프로그래밍`}
+        sliceStyle={{
+          textSize: 18,
+          textColor: "#32BFA1",
+          backgroundColor: vars.colors.$scale.gray[900],
+          textAlign: "left",
+          paddingX: 8,
+          textWeight: 700,
+        }}
+      />
+      <ImageSlice
+        imageUrl={`${CDN_BASE_URL}/test/lineup_programming_1.webp`}
+        alt="강의 라인업: 프로그래밍 1"
+        sliceStyle={{
+          width: 280,
+          backgroundColor: vars.colors.$scale.gray[900],
+        }}
+      />
+      <SpacingSlice
+        sliceStyle={{
+          backgroundColor: vars.colors.$scale.gray[900],
+          height: 32,
         }}
       />
     </MobileFirstLayout>
