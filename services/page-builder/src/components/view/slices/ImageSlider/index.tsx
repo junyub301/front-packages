@@ -4,7 +4,8 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { vars } from "@study/themes";
 import { convertSpacingRemToPx } from "@/src/utils/size";
-type Image = {
+
+export type Image = {
   imageUrl: string;
   alt: string;
 };
