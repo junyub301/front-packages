@@ -5,6 +5,7 @@ import { ImageSlice } from "../components/view/slices/Image";
 import { CDN_BASE_URL } from "../constants";
 import { SpacingSlice } from "../components/view/Spacing";
 import { ImageSliderSectionSlice } from "../components/view/slices/ImageSliderSection";
+import { AccordionSlice } from "../components/view/slices/Accordion";
 
 const PlaygroundPage = () => {
   return (
@@ -194,6 +195,7 @@ const PlaygroundPage = () => {
           height: 32,
         }}
       />
+      <AccordionSlice key="1" title="1. 주의 사항" content="주의" />
     </MobileFirstLayout>
   );
 };
