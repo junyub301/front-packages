@@ -1,5 +1,6 @@
 import { Text } from "@study/react-components-layout";
 import { vars } from "@study/themes";
+import { useMemo } from "react";
 
 type Props = {
   text: string;
@@ -36,20 +37,29 @@ export const TextSlice: React.FC<Props> = ({
     highlightTextWeight,
   } = sliceStyle ?? {};
 
-  const regex = new RegExp(`(${highlightTexts?.join("|")})`, "gi");
-  const highlightedText = text.split(regex).map((word, index) => {
-    if (highlightTexts.some((query) => new RegExp(query, "i").test(word))) {
-      return (
-        <span
-          key={`${word}-${index}`}
-          style={{ color: highlightTextColor, fontWeight: highlightTextWeight }}
-        >
-          {word}
-        </span>
-      );
+  const highlightText = highlightTexts.length > 0;
+  const highlightedText = useMemo(() => {
+    if (highlightText) {
+      const regex = new RegExp(`(${highlightTexts?.join("|")})`, "gi");
+      return text.split(regex).map((word, index) => {
+        if (highlightTexts.some((query) => new RegExp(query, "i").test(word))) {
+          return (
+            <span
+              key={`${word}-${index}`}
+              style={{
+                color: highlightTextColor,
+                fontWeight: highlightTextWeight,
+              }}
+            >
+              {word}
+            </span>
+          );
+        }
+        return word;
+      });
     }
-    return word;
-  });
+    return text;
+  }, [text, highlightText]);
 
   return (
     <Text
