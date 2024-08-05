@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@study/react-components-accordion": "workspace:^",
+    "@study/react-components-button": "workspace:^",
     "@study/react-components-layout": "workspace:^",
     "@study/themes": "workspace:^",
     "next": "14.2.5",

@@ -4114,6 +4114,7 @@ __metadata:
   resolution: "@study/page-builder@workspace:services/page-builder"
   dependencies:
     "@study/react-components-accordion": "workspace:^"
+    "@study/react-components-button": "workspace:^"
     "@study/react-components-layout": "workspace:^"
     "@study/themes": "workspace:^"
     "@types/node": "npm:^20.14.12"
