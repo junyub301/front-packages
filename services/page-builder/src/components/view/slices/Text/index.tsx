@@ -1,23 +1,10 @@
+import { TextSliceSchema } from "@/src/utils/validation/schema/slices";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
 import { Text } from "@study/react-components-layout";
 import { vars } from "@study/themes";
 import { useMemo } from "react";
 
-type Props = {
-  text: string;
-  highlightTexts?: string[];
-  sliceStyle?: {
-    padding?: keyof typeof vars.box.spacing;
-    paddingX?: keyof typeof vars.box.spacing;
-    paddingY?: keyof typeof vars.box.spacing;
-    backgroundColor?: string;
-    textColor?: string;
-    textSize?: keyof typeof vars.typography.fontSize;
-    textWeight?: keyof typeof vars.typography.fontWeight;
-    textAlign?: "left" | "right" | "center";
-    highlightTextColor?: string;
-    highlightTextWeight?: keyof typeof vars.typography.fontWeight;
-  };
-};
+type Props = SliceSchemaProps<typeof TextSliceSchema>;
 
 export const TextSlice: React.FC<Props> = ({
   text,

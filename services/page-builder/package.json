@@ -14,12 +14,14 @@
     "@study/react-components-accordion": "workspace:^",
     "@study/react-components-button": "workspace:^",
     "@study/react-components-layout": "workspace:^",
+    "@study/react-components-toast": "workspace:^",
     "@study/themes": "workspace:^",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "short-unique-id": "^5.2.0",
-    "swiper": "^11.1.9"
+    "swiper": "^11.1.9",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20.14.12",

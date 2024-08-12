@@ -1,9 +1,7 @@
 import { MobileFirstLayout } from "@/src/components/layout/MobileFirstLayout";
 import { CDN_BASE_URL } from "@/src/constants";
-import {
-  ViewSchema,
-  useViewSchemaSlices,
-} from "@/src/hooks/useViewSchemaSlices";
+import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
+import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
 const ViewPage = ({
@@ -16,7 +14,7 @@ const ViewPage = ({
 export default ViewPage;
 
 export const getStaticProps: GetStaticProps<{
-  jsonSchema: ViewSchema;
+  jsonSchema: ViewSchemaProps;
 }> = async (context) => {
   const slug = (context.params?.slug as string) ?? "";
 
