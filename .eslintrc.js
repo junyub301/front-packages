@@ -33,6 +33,7 @@ module.exports = {
         },
       ],
       "storybook/prefer-pascal-case": "off",
+      "@typescript-eslint/no-explicit-any":"off"
     },
     overrides: [
       {
