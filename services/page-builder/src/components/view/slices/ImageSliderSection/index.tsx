@@ -1,17 +1,10 @@
+import { ImageSliderSectionSliceSchema } from "@/src/utils/validation/schema/slices";
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
 import { vars } from "@study/themes";
-import { Image, ImageSliderSlice } from "../ImageSlider";
+import { ImageSliderSlice } from "../ImageSlider";
 import { TextSlice } from "../Text";
 
-type Props = {
-  text: string;
-  images: Image[];
-  sliceStyle?: {
-    paddingX?: keyof typeof vars.box.spacing;
-    textColor?: string;
-    backgroundColor?: string;
-    imageItemWidth?: number;
-  };
-};
+type Props = SliceSchemaProps<typeof ImageSliderSectionSliceSchema>;
 
 export const ImageSliderSectionSlice: React.FC<Props> = ({
   text,

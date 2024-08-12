@@ -1,11 +1,8 @@
 import { vars } from "@study/themes";
 import { Box } from "@study/react-components-layout";
-type Props = {
-  sliceStyle?: {
-    height?: number;
-    backgroundColor?: string;
-  };
-};
+import { SliceSchemaProps } from "@/src/utils/validation/schema/types";
+import { SpacingSliceSchema } from "@/src/utils/validation/schema/slices";
+type Props = SliceSchemaProps<typeof SpacingSliceSchema>;
 
 export const SpacingSlice: React.FC<Props> = ({ sliceStyle }: Props) => {
   const {
