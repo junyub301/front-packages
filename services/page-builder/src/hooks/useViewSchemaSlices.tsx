@@ -2,28 +2,12 @@ import { useMemo } from "react";
 import { SpacingSlice } from "../components/view/Spacing";
 import { ImageSlice } from "../components/view/slices/Image";
 import { ImageSliderSectionSlice } from "../components/view/slices/ImageSliderSection";
-import {
-  MetadataSlice,
-  MetadataSliceProps,
-} from "../components/view/slices/Metadata";
+import { MetadataSlice } from "../components/view/slices/Metadata";
 import { TextSlice } from "../components/view/slices/Text";
 import { AccordionSlice } from "../components/view/slices/Accordion";
+import { ViewSchemaProps } from "../utils/validation/schema/types";
 
-export type ViewSchema = {
-  slug: string;
-  metadata?: MetadataSliceProps;
-  slices: {
-    sliceName:
-      | "TextSlice"
-      | "ImageSlice"
-      | "SpacingSlice"
-      | "ImageSliderSectionSlice"
-      | "AccordionSlice";
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: any;
-  }[];
-};
-export const useViewSchemaSlices = (viewSchema: ViewSchema) => {
+export const useViewSchemaSlices = (viewSchema: ViewSchemaProps) => {
   const slices = useMemo(() => {
     const sliceList = [] as React.ReactNode[];
 
