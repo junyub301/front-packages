@@ -16,6 +16,7 @@
     "@study/react-components-layout": "workspace:^",
     "@study/react-components-toast": "workspace:^",
     "@study/themes": "workspace:^",
+    "axios": "^1.7.4",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

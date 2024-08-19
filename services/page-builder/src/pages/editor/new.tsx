@@ -12,10 +12,11 @@ import { useViewSchemaValidation } from "@/src/hooks/useViewSchemaValidation";
 import { useToast } from "@study/react-components-toast";
 import { DesktopFirstSideNav } from "@/src/components/layout/DesktopFirstLayout/SideNav";
 import { JsonPresetList } from "@/src/components/EditorNewPage/JsonPresetList";
+import { putViewDetail } from "@/src/api/worker/putViewDetail";
 
 export default function EditorNewPage() {
   const { randomUUID } = new ShortUniqueId({ length: 10 });
-  const viewId = randomUUID();
+  const [viewId] = useState(randomUUID());
   const { validateViewSchema, handleEditorValidation } =
     useViewSchemaValidation();
 
@@ -45,6 +46,39 @@ export default function EditorNewPage() {
       },
     });
   };
+  const handlePublish = () => {
+    validateViewSchema({
+      viewSchema: schema,
+      onSuccess: async () => {
+        try {
+          await putViewDetail({
+            viewId,
+            data: {
+              value: schema,
+              metadata: { createAt: new Date().toISOString() },
+            },
+          });
+          const objectifiedSchema = JSON.parse(schema);
+          const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
+          const slug = `${convertedSlug}-${viewId}`;
+          window.open(`/view/${slug}`, "_blank");
+        } catch (error: any) {
+          toast({
+            payload: {
+              message: `[Fetch Error] ${error.message}`,
+            },
+          });
+        }
+      },
+      onError: ({ message }) => {
+        toast({
+          payload: {
+            message,
+          },
+        });
+      },
+    });
+  };
   return (
     <DesktopFirstLayout>
       <DesktopFirstNav gap={8}>
@@ -59,7 +93,7 @@ export default function EditorNewPage() {
         >
           미리보기
         </Button>
-        <Button size="md" color="green">
+        <Button size="md" color="green" onClick={handlePublish}>
           배포하기
         </Button>
       </DesktopFirstNav>
