@@ -54,10 +54,14 @@ export default function EditorNewPage() {
           await putViewDetail({
             viewId,
             data: {
-              value: JSON.stringify(schema),
+              value: schema,
               metadata: { createAt: new Date().toISOString() },
             },
           });
+          const objectifiedSchema = JSON.parse(schema);
+          const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
+          const slug = `${convertedSlug}-${viewId}`;
+          window.open(`/view/${slug}`, "_blank");
         } catch (error: any) {
           toast({
             payload: {

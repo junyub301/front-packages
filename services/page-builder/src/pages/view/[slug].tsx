@@ -1,5 +1,5 @@
+import { getViewDetail } from "@/src/api/worker/getViewDetail";
 import { MobileFirstLayout } from "@/src/components/layout/MobileFirstLayout";
-import { CDN_BASE_URL } from "@/src/constants";
 import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
 import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
@@ -21,17 +21,19 @@ export const getStaticProps: GetStaticProps<{
   const sliceSlug = slug.split("-");
   const viewId = sliceSlug[sliceSlug.length - 1];
 
-  const response = await fetch(`${CDN_BASE_URL}/view/${viewId}.json`);
-  if (response.status === 200) {
-    const jsonData = await response.json();
+  try {
+    const { value } = await getViewDetail({ viewId });
     return {
-      props: { jsonSchema: jsonData },
+      props: {
+        jsonSchema: value,
+      },
       revalidate: 10,
     };
+  } catch (error: any) {
+    return {
+      notFound: true,
+    };
   }
-  return {
-    notFound: true,
-  };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
