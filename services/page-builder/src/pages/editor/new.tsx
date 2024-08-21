@@ -51,16 +51,20 @@ export default function EditorNewPage() {
       viewSchema: schema,
       onSuccess: async () => {
         try {
+          const objectifiedSchema = JSON.parse(schema);
+          const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
+          const slug = `${convertedSlug}-${viewId}`;
           await putViewDetail({
             viewId,
             data: {
               value: schema,
-              metadata: { createAt: new Date().toISOString() },
+              metadata: {
+                createAt: new Date().toISOString(),
+                title: objectifiedSchema.slug,
+              },
             },
           });
-          const objectifiedSchema = JSON.parse(schema);
-          const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
-          const slug = `${convertedSlug}-${viewId}`;
+
           window.open(`/view/${slug}`, "_blank");
         } catch (error: any) {
           toast({
