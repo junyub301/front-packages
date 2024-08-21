@@ -1,11 +1,18 @@
+import {
+  ViewListResponseData,
+  getViewList,
+} from "@/src/api/worker/getViewList";
+import ViewList from "@/src/components/EditorPage/ViewList";
 import { DesktopFirstLayout } from "@/src/components/layout/DesktopFirstLayout";
 import { DesktopFirstBody } from "@/src/components/layout/DesktopFirstLayout/Body";
 import { DesktopFirstNav } from "@/src/components/layout/DesktopFirstLayout/Nav";
 import { Button } from "@study/react-components-button";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Link from "next/link";
-import React from "react";
 
-export default function EditorPage() {
+export default function EditorPage({
+  keys,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <DesktopFirstLayout>
       <DesktopFirstNav>
@@ -15,7 +22,16 @@ export default function EditorPage() {
           </Button>
         </Link>
       </DesktopFirstNav>
-      <DesktopFirstBody>Body</DesktopFirstBody>
+      <DesktopFirstBody justify="center" background="gray">
+        <ViewList viewList={keys} />
+      </DesktopFirstBody>
     </DesktopFirstLayout>
   );
 }
+
+export const getServerSideProps: GetServerSideProps<
+  ViewListResponseData
+> = async () => {
+  const response = await getViewList();
+  return { props: response };
+};
