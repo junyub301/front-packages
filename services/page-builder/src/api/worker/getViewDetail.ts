@@ -1,10 +1,11 @@
 import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
 import { WORKER_BASE_PATH, workerInstance } from ".";
+import { ViewMetaData } from "./type";
 
 type ViewDetailRequestData = {
   value: ViewSchemaProps;
   // eslint-disable-next-line @typescript-eslint/ban-types
-  metadata: Object;
+  metadata: ViewMetaData;
 };
 
 const getGetViewDetailPath = (viewId: string) =>

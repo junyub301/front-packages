@@ -1,9 +1,10 @@
 import { WORKER_BASE_PATH, workerInstance } from ".";
+import { ViewMetaData } from "./type";
 
 type ViewDetailRequestData = {
   value: string;
   // eslint-disable-next-line @typescript-eslint/ban-types
-  metadata: Object;
+  metadata: ViewMetaData;
 };
 
 const getPutViewDetailPath = (viewId: string) =>
