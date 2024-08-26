@@ -4,11 +4,10 @@ import { ViewMetaData } from "./type";
 
 type ViewDetailRequestData = {
   value: ViewSchemaProps;
-  // eslint-disable-next-line @typescript-eslint/ban-types
   metadata: ViewMetaData;
 };
 
-const getGetViewDetailPath = (viewId: string) =>
+export const getViewDetailPath = (viewId: string) =>
   `${WORKER_BASE_PATH}/${viewId}`;
 
 type Params = {
@@ -16,7 +15,7 @@ type Params = {
 };
 
 export const getViewDetail = async ({ viewId }: Params) => {
-  const response = await workerInstance.get(getGetViewDetailPath(viewId));
+  const response = await workerInstance.get(getViewDetailPath(viewId));
 
   const responseData = {
     value: JSON.parse(response.data.data.value),
