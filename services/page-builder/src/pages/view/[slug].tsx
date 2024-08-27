@@ -1,5 +1,5 @@
 import { getViewDetail } from "@/src/api/worker/getViewDetail";
-import { MobileFirstLayout } from "@/src/components/layout/MobileFirstLayout";
+import { MobileFirstLayout } from "@/src/components/Common/Layouts/MobileFirstLayout";
 import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
 import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
