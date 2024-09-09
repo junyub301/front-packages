@@ -5,19 +5,57 @@ import { DesktopFirstBody } from "@/src/components/Common/Layouts/DesktopFirstLa
 import { DesktopFirstNav } from "@/src/components/Common/Layouts/DesktopFirstLayout/Nav";
 import { DesktopFirstSideNav } from "@/src/components/Common/Layouts/DesktopFirstLayout/SideNav";
 import { Spacing } from "@/src/components/Common/Spacing";
+import { ViewSliceSchemaSnippet } from "@/src/utils/jsonEditor/ViewSchemaSnippet";
+import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
+import { ViewSchema } from "@/src/utils/validation/schema/view";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@study/react-components-button";
 import { Box, Flex } from "@study/react-components-layout";
 import { vars } from "@study/themes";
 import { useForm } from "react-hook-form";
+import { useToast } from "@study/react-components-toast";
+import { getValidateFormErrorMessages } from "@/src/utils/validation/error";
 const EditorNewFormPage: React.FC = () => {
-  const { register, handleSubmit } = useForm();
-  const handleReset = () => {};
-  const handlePreview = handleSubmit((formData) => {
-    console.log("🚀 ~ handlePreview ~ formData:", formData);
+  const { toast } = useToast();
+  const { reset, register, handleSubmit } = useForm<ViewSchemaProps>({
+    defaultValues: ViewSliceSchemaSnippet.init,
+    resolver: zodResolver(ViewSchema),
   });
-  const handlePublish = handleSubmit((formData) => {
-    console.log("🚀 ~ handlePublish ~ formData:", formData);
-  });
+  const handleReset = () => {
+    reset();
+  };
+  const handlePreview = handleSubmit(
+    (formData) => {
+      console.log("🚀 ~ handlePreview ~ formData:", formData);
+    },
+    (error) => {
+      const errors = getValidateFormErrorMessages(error);
+      const firstError = errors[0];
+      if (firstError) {
+        toast({
+          payload: {
+            message: `[${firstError.key}] ${firstError.message}`,
+          },
+        });
+      }
+    },
+  );
+  const handlePublish = handleSubmit(
+    (formData) => {
+      console.log("🚀 ~ handlePublish ~ formData:", formData);
+    },
+    (error) => {
+      const errors = getValidateFormErrorMessages(error);
+      const firstError = errors[0];
+      if (firstError) {
+        toast({
+          payload: {
+            message: `[${firstError.key}] ${firstError.message}`,
+          },
+        });
+      }
+    },
+  );
   return (
     <DesktopFirstLayout>
       <DesktopFirstNav gap={8}>

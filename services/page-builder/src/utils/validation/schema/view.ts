@@ -10,7 +10,7 @@ import {
 } from "./slices";
 
 export const ViewSchema = z.object({
-  slug: z.string(),
+  slug: z.string().trim().min(1, { message: "Slug는 1자 이상이여야 합니다." }),
   metadata: MetadataSliceSchema,
   slices: z.array(
     AccordionSliceSchema.or(ImageSliceSchema)

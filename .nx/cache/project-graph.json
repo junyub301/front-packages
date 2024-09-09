@@ -300,13 +300,13 @@
         "tags": []
       }
     },
-    "@study/react-components-button": {
-      "name": "@study/react-components-button",
+    "@study/react-components-select": {
+      "name": "@study/react-components-select",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/button",
-        "sourceRoot": "packages/react/components/button",
-        "name": "@study/react-components-button",
+        "root": "packages/react/components/select",
+        "sourceRoot": "packages/react/components/select",
+        "name": "@study/react-components-select",
         "projectType": "library",
         "targets": {
           "build": {
@@ -360,13 +360,13 @@
         "tags": []
       }
     },
-    "@study/react-components-select": {
-      "name": "@study/react-components-select",
+    "@study/react-components-button": {
+      "name": "@study/react-components-button",
       "type": "lib",
       "data": {
-        "root": "packages/react/components/select",
-        "sourceRoot": "packages/react/components/select",
-        "name": "@study/react-components-select",
+        "root": "packages/react/components/button",
+        "sourceRoot": "packages/react/components/button",
+        "name": "@study/react-components-button",
         "projectType": "library",
         "targets": {
           "build": {
@@ -14806,28 +14806,6 @@
         "type": "static"
       }
     ],
-    "@study/react-components-button": [
-      {
-        "source": "@study/react-components-button",
-        "target": "@study/react-hooks-button",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-button",
-        "target": "@study/esbuild-config",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-button",
-        "target": "@study/themes",
-        "type": "static"
-      },
-      {
-        "source": "@study/react-components-button",
-        "target": "npm:typescript",
-        "type": "static"
-      }
-    ],
     "@study/react-components-select": [
       {
         "source": "@study/react-components-select",
@@ -14846,6 +14824,28 @@
       },
       {
         "source": "@study/react-components-select",
+        "target": "npm:typescript",
+        "type": "static"
+      }
+    ],
+    "@study/react-components-button": [
+      {
+        "source": "@study/react-components-button",
+        "target": "@study/react-hooks-button",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-button",
+        "target": "@study/esbuild-config",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-button",
+        "target": "@study/themes",
+        "type": "static"
+      },
+      {
+        "source": "@study/react-components-button",
         "target": "npm:typescript",
         "type": "static"
       }
