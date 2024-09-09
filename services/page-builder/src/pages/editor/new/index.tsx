@@ -15,7 +15,14 @@ import { vars } from "@study/themes";
 import { useForm } from "react-hook-form";
 import { useToast } from "@study/react-components-toast";
 import { getValidateFormErrorMessages } from "@/src/utils/validation/error";
+import ShortUniqueId from "short-unique-id";
+import { useState } from "react";
+import { previewStorage } from "@/src/utils/storage";
+import { formatObjectToJson } from "@/src/utils/jsonEditor";
+import { putViewDetail } from "@/src/api/worker/putViewDetail";
 const EditorNewFormPage: React.FC = () => {
+  const { randomUUID } = new ShortUniqueId({ length: 10 });
+  const [viewId] = useState(randomUUID());
   const { toast } = useToast();
   const { reset, register, handleSubmit } = useForm<ViewSchemaProps>({
     defaultValues: ViewSliceSchemaSnippet.init,
@@ -26,7 +33,8 @@ const EditorNewFormPage: React.FC = () => {
   };
   const handlePreview = handleSubmit(
     (formData) => {
-      console.log("🚀 ~ handlePreview ~ formData:", formData);
+      previewStorage.set(viewId, formatObjectToJson(formData));
+      window.open(`/preview/${viewId}`, "_blank");
     },
     (error) => {
       const errors = getValidateFormErrorMessages(error);
@@ -41,8 +49,31 @@ const EditorNewFormPage: React.FC = () => {
     },
   );
   const handlePublish = handleSubmit(
-    (formData) => {
-      console.log("🚀 ~ handlePublish ~ formData:", formData);
+    async (formData) => {
+      const convertedSlug = formData.slug.split(" ").join("-");
+      const currentFormData = {
+        ...formData,
+        slug: `${convertedSlug}-${viewId}`,
+      };
+      try {
+        await putViewDetail({
+          viewId,
+          data: {
+            value: formatObjectToJson(currentFormData),
+            metadata: {
+              title: formData.slug,
+              createAt: new Date().toISOString(),
+            },
+          },
+        });
+        window.open(`/view/${currentFormData.slug}`, "_blank");
+      } catch (error: any) {
+        toast({
+          payload: {
+            message: `[Fetch Error] ${error.message}`,
+          },
+        });
+      }
     },
     (error) => {
       const errors = getValidateFormErrorMessages(error);
