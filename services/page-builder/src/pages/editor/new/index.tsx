@@ -4,13 +4,20 @@ import { DesktopFirstLayout } from "@/src/components/Common/Layouts/DesktopFirst
 import { DesktopFirstBody } from "@/src/components/Common/Layouts/DesktopFirstLayout/Body";
 import { DesktopFirstNav } from "@/src/components/Common/Layouts/DesktopFirstLayout/Nav";
 import { DesktopFirstSideNav } from "@/src/components/Common/Layouts/DesktopFirstLayout/SideNav";
+import { Spacing } from "@/src/components/Common/Spacing";
 import { Button } from "@study/react-components-button";
 import { Box, Flex } from "@study/react-components-layout";
 import { vars } from "@study/themes";
+import { useForm } from "react-hook-form";
 const EditorNewFormPage: React.FC = () => {
+  const { register, handleSubmit } = useForm();
   const handleReset = () => {};
-  const handlePreview = () => {};
-  const handlePublish = () => {};
+  const handlePreview = handleSubmit((formData) => {
+    console.log("🚀 ~ handlePreview ~ formData:", formData);
+  });
+  const handlePublish = handleSubmit((formData) => {
+    console.log("🚀 ~ handlePublish ~ formData:", formData);
+  });
   return (
     <DesktopFirstLayout>
       <DesktopFirstNav gap={8}>
@@ -43,8 +50,17 @@ const EditorNewFormPage: React.FC = () => {
             boxShadow="base"
             style={{ background: vars.colors.$static.light.color.white }}
           >
-            <FormFieldSection title="테스트">
-              <InputField isRequired label="테스트" />
+            <FormFieldSection title="common">
+              <InputField isRequired label="slug" {...register("slug")} />
+            </FormFieldSection>
+            <Spacing />
+            <FormFieldSection title="metadata">
+              <InputField label="title" {...register("metadata.title")} />
+              <InputField label="ogTitle" {...register("metadata.ogTitle")} />
+              <InputField
+                label="ogDescription"
+                {...register("metadata.ogDescription")}
+              />
             </FormFieldSection>
           </Box>
         </Flex>
