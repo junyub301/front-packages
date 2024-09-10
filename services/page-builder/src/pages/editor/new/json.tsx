@@ -11,7 +11,7 @@ import { previewStorage } from "@/src/utils/storage";
 import { useViewSchemaValidation } from "@/src/hooks/useViewSchemaValidation";
 import { useToast } from "@study/react-components-toast";
 import { DesktopFirstSideNav } from "@/src/components/Common/Layouts/DesktopFirstLayout/SideNav";
-import { JsonPresetList } from "@/src/components/Features/EditorNewPage/JsonPresetList";
+import { JsonPresetList } from "@/src/components/Features/EditorNewJsonPage/JsonPresetList";
 import { putViewDetail } from "@/src/api/worker/putViewDetail";
 
 export default function EditorNewJsonPage() {
