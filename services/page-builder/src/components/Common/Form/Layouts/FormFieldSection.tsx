@@ -1,13 +1,8 @@
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-} from "@study/react-components-accordion";
+import { Accordion, AccordionItem, AccordionButton, AccordionPanel } from "@study/react-components-accordion";
 import { useState } from "react";
 import ShortUniqueId from "short-unique-id";
 type Props = {
-  title: string;
+  title: React.ReactNode;
   children: React.ReactNode;
 };
 
