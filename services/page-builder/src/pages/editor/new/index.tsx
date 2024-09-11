@@ -4,6 +4,7 @@ import { EditorNewFormGlobalNavBar } from "@/src/components/Features/EditorNewFo
 import { EditorNavFormSideNavBar } from "@/src/components/Features/EditorNewFormPage/SideNavBar";
 import { EditorNewViewSchemaForm } from "@/src/components/Features/EditorNewFormPage/ViewSchemaForm";
 import { useViewSchemaForm } from "@/src/hooks/useViewSchemaForm";
+import { FormSliceFieldArrayProvider } from "@/src/hooks/useViewSchemaFormSliceFieldArray";
 import { Box, Flex } from "@study/react-components-layout";
 import { vars } from "@study/themes";
 import { useState } from "react";
@@ -17,27 +18,29 @@ const EditorNewFormPage: React.FC = () => {
 
   return (
     <FormProvider {...formMethods}>
-      <DesktopFirstLayout>
-        <EditorNewFormGlobalNavBar viewId={viewId} />
-        <DesktopFirstBody padding={0}>
-          <EditorNavFormSideNavBar />
-          <Flex
-            className="w-full min-h-screen relative top-0 pt-[16px]"
-            background="gray"
-            justify="center"
-          >
-            <Box
-              paddingX={8}
-              paddingY={6}
-              className="max-w-[600px] w-full"
-              boxShadow="base"
-              style={{ background: vars.colors.$static.light.color.white }}
+      <FormSliceFieldArrayProvider>
+        <DesktopFirstLayout>
+          <EditorNewFormGlobalNavBar viewId={viewId} />
+          <DesktopFirstBody padding={0}>
+            <EditorNavFormSideNavBar />
+            <Flex
+              className="w-full min-h-screen relative top-0 pt-[16px] ml-[280px]"
+              background="gray"
+              justify="center"
             >
-              <EditorNewViewSchemaForm />
-            </Box>
-          </Flex>
-        </DesktopFirstBody>
-      </DesktopFirstLayout>
+              <Box
+                paddingX={8}
+                paddingY={6}
+                className="max-w-[600px] w-full"
+                boxShadow="base"
+                style={{ background: vars.colors.$static.light.color.white }}
+              >
+                <EditorNewViewSchemaForm />
+              </Box>
+            </Flex>
+          </DesktopFirstBody>
+        </DesktopFirstLayout>
+      </FormSliceFieldArrayProvider>
     </FormProvider>
   );
 };
