@@ -5,10 +5,7 @@ import { accordionPanelStyle, panelHeight } from "./style.css";
 import { useAccordionContext } from "./AccordionContext";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 
-const AccordionPanel = (
-  props: AccordionPanelProps,
-  ref: React.Ref<HTMLDivElement>,
-) => {
+const AccordionPanel = (props: AccordionPanelProps, ref: React.Ref<HTMLDivElement>) => {
   const { itemName = "", children, className, style, ...rest } = props;
   const innerRef = useRef<HTMLDivElement>(null);
 
@@ -18,11 +15,24 @@ const AccordionPanel = (
 
   const [currentPanelHeight, setCurrentPanelHeight] = useState<string>();
   useEffect(() => {
+    const handleResize = () => {
+      if (!innerRef.current) return;
+      setCurrentPanelHeight(`${innerRef.current.clientHeight}px`);
+    };
     if (!innerRef.current) return;
-
-    setCurrentPanelHeight(
-      isActive ? `${innerRef.current.clientHeight}px` : "0",
-    );
+    if (isActive) {
+      handleResize();
+      const observer = new MutationObserver(handleResize);
+      observer.observe(innerRef.current, {
+        childList: true,
+        subtree: true,
+      });
+      return () => {
+        observer.disconnect();
+      };
+    } else {
+      setCurrentPanelHeight("0");
+    }
   }, [isActive, activeItems]);
 
   return (
@@ -33,8 +43,7 @@ const AccordionPanel = (
       data-action-item={isActive}
       style={{
         ...assignInlineVars({
-          [panelHeight]:
-            currentPanelHeight ?? `${innerRef?.current?.clientHeight}px`,
+          [panelHeight]: currentPanelHeight ?? `${innerRef?.current?.clientHeight}px`,
         }),
         ...style,
       }}

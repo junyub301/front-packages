@@ -4152,6 +4152,7 @@ __metadata:
     "@study/react-components-button": "workspace:^"
     "@study/react-components-input": "workspace:^"
     "@study/react-components-layout": "workspace:^"
+    "@study/react-components-select": "workspace:^"
     "@study/react-components-toast": "workspace:^"
     "@study/themes": "workspace:^"
     "@types/node": "npm:^20.14.12"
