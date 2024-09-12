@@ -7,6 +7,7 @@ import { InputField } from "@/src/components/Common/Form/Field/InputField";
 import { Divider } from "@study/react-components-layout";
 import { vars } from "@study/themes";
 import { SelectField } from "@/src/components/Common/Form/Field/SelectField";
+import { ViewSchemaFormSliceTextHighlightFields } from "./TextHighlightField";
 type Props = {
   fieldIndex: number;
 };
@@ -42,6 +43,7 @@ export const ViewSchemaFormSliceTextFields = ({ fieldIndex }: Props) => {
         defaultValue={vars.colors.$static.light.color.black}
         {...register(`slices.${fieldIndex}.data.sliceStyle.textColor`)}
       />
+      <ViewSchemaFormSliceTextHighlightFields label="highlight" register={register} fieldIndex={fieldIndex} />
       <InputField
         label="textSize"
         type="number"
@@ -68,6 +70,18 @@ export const ViewSchemaFormSliceTextFields = ({ fieldIndex }: Props) => {
         type="color"
         defaultValue={vars.colors.$static.light.gray[50]}
         {...register(`slices.${fieldIndex}.data.sliceStyle.backgroundColor`)}
+      />
+      <InputField
+        label="highlightTextColor"
+        type="color"
+        defaultValue={vars.colors.$static.light.green[500]}
+        {...register(`slices.${fieldIndex}.data.sliceStyle.highlightTextColor`)}
+      />
+      <InputField
+        label="highlightTextWeight"
+        type="number"
+        defaultValue={800}
+        {...register(`slices.${fieldIndex}.data.sliceStyle.highlightTextWeight`)}
       />
     </FormFieldSection>
   );

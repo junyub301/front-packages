@@ -12,7 +12,7 @@ export const FormFieldWrapper = (props: FormFieldWrapperProps) => {
   return (
     <label {...rest}>
       <Flex padding={2} gap={8} className="w-full">
-        <Text fontSize="sm" className="w-[200px] break-all flex items-center">
+        <Text fontSize="sm" className="w-[220px] break-all flex items-center">
           {label}
           {isRequired && <span style={{ color: vars.colors.$static.light.red[500] }}>*</span>}
         </Text>
