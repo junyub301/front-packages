@@ -115,6 +115,7 @@ export const TextSliceSchema = z.object({
           (char) => (typeof char === "string" ? parseInt(z.string().parse(char)) : char),
           z.number().optional(),
         ),
+        backgroundColor: z.string().optional(),
         textAlign: z.union([z.literal("left"), z.literal("center"), z.literal("right")]).optional(),
         highlightTextColor: z.string().optional(),
         highlightTextWeight: z.preprocess(

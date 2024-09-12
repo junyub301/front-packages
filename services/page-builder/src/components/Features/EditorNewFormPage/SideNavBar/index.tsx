@@ -21,12 +21,23 @@ export const EditorNavFormSideNavBar = () => {
         });
       },
     },
+    {
+      name: "TextSlice",
+      onClick: () => {
+        append({
+          sliceName: "TextSlice",
+          data: {
+            text: "",
+          },
+        });
+      },
+    },
   ];
   return (
     <DesktopFirstSideNav>
       {presets.map(({ name, onClick }) => (
         <Fragment key={name}>
-          <Button onClick={onClick} className="w-full" style={{ borderRadius: 0 }} variant="ghost">
+          <Button onClick={onClick} style={{ borderRadius: 0, width: "100%" }} variant="ghost">
             {name}
           </Button>
           <Divider />
