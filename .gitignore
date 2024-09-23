@@ -29,3 +29,6 @@ dist
 
 # production
 **/build
+
+.env
+**/.env

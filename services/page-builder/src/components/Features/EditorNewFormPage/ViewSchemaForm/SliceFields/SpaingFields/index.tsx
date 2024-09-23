@@ -27,7 +27,7 @@ export const ViewSchemaFormSliceSpacingFields = ({ fieldIndex }: Props) => {
     <FormFieldSection
       title={
         <>
-          ${fieldIndex}. Spacing
+          {fieldIndex}. Spacing
           <Button size="xs" variant="outline" color="red" onClick={handleRemove}>
             삭제
           </Button>
