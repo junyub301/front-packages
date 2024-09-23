@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { Divider } from "@study/react-components-layout";
 import { vars } from "@study/themes";
 import { SelectField } from "@/src/components/Common/Form/Field/SelectField";
+import { ImageURLField } from "@/src/components/Common/Form/Field/ImageURLField";
 
 type Props = {
   fieldIndex: number;
@@ -36,7 +37,8 @@ export const ViewSchemaFormSliceImageFields = ({ fieldIndex }: Props) => {
         </>
       }
     >
-      <InputField isRequired label="imageURL" {...register(`slices.${fieldIndex}.data.imageUrl`)} />
+      <ImageURLField label="imageURL" isRequired />
+      {/* <InputField isRequired label="imageURL" {...register(`slices.${fieldIndex}.data.imageUrl`)} /> */}
       <InputField isRequired label="alt" {...register(`slices.${fieldIndex}.data.alt`)} />
       <Divider />
       <InputField label="width" {...register(`slices.${fieldIndex}.data.sliceStyle.width`)} />
