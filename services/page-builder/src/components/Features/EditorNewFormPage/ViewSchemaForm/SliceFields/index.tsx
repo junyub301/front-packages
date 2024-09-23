@@ -4,6 +4,7 @@ import { vars } from "@study/themes";
 import { ViewSchemaFormSliceSpacingFields } from "./SpaingFields";
 import { useViewSchemaFormSliceFieldArray } from "@/src/hooks/useViewSchemaFormSliceFieldArray";
 import { ViewSchemaFormSliceTextFields } from "./TextFields";
+import { ViewSchemaFormSliceImageFields } from "./ImageFields";
 export const ViewSchemaFormSliceFields = () => {
   const { fields } = useViewSchemaFormSliceFieldArray();
   return (
@@ -18,6 +19,8 @@ export const ViewSchemaFormSliceFields = () => {
             return <ViewSchemaFormSliceSpacingFields key={`${field.id}`} fieldIndex={index} />;
           case "TextSlice":
             return <ViewSchemaFormSliceTextFields key={`${field.id}`} fieldIndex={index} />;
+          case "ImageSlice":
+            return <ViewSchemaFormSliceImageFields key={`${field.id}`} fieldIndex={index} />;
           default:
             <></>;
         }
