@@ -44,6 +44,17 @@ export const EditorNavFormSideNavBar = () => {
         });
       },
     },
+    {
+      name: "ImageSliderSlice",
+      onClick: () => {
+        append({
+          sliceName: "ImageSliderSlice",
+          data: {
+            images: [],
+          },
+        });
+      },
+    },
   ];
   return (
     <DesktopFirstSideNav>

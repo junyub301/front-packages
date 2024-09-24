@@ -14,6 +14,8 @@ export const ImageURLInput = ({
   onChange,
   placeholder = "이미지 선택",
 }: ImageURLInputProps) => {
+  const { randomUUID } = new ShortUniqueId({ length: 4 });
+  const [uuid] = useState(randomUUID);
   const [imageURL, setImageURL] = useState(defaultValue);
 
   const handleInputFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,10 +37,10 @@ export const ImageURLInput = ({
   };
 
   return (
-    <label>
+    <label htmlFor={`imageFile-${uuid}`}>
       <input
         type="file"
-        id="imageFile"
+        id={`imageFile-${uuid}`}
         accept=".png, .jpg, .jpeg, .webp"
         style={{ display: "none" }}
         onChange={handleInputFileChange}
