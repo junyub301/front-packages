@@ -1,12 +1,17 @@
-import { useViewSchemaFormFieldArray } from "@/src/hooks/useViewSchemaForm";
+import { ImageURLInput } from "@/src/components/Common/Form/Input/ImageURL";
+import { useViewSchemaFormContext, useViewSchemaFormFieldArray } from "@/src/hooks/useViewSchemaForm";
 import { Button } from "@study/react-components-button";
+import { Input } from "@study/react-components-input";
 import { Box, Flex, Text } from "@study/react-components-layout";
+
 type Props = {
   fieldIndex: number;
 };
 
 export const ImagesFields = ({ fieldIndex }: Props) => {
   const { fields, append, remove } = useViewSchemaFormFieldArray(`slices.${fieldIndex}.data.images`);
+  const { register, setValue } = useViewSchemaFormContext();
+
   const handleAdd = () => {
     append({
       imageUrl: "",
@@ -16,6 +21,10 @@ export const ImagesFields = ({ fieldIndex }: Props) => {
 
   const handleRemove = (index: number) => {
     remove(index);
+  };
+
+  const handleImageURLChange = (index: number, value: string) => {
+    setValue(`slices.${fieldIndex}.data.images.${index}.imageUrl`, value);
   };
 
   return (
@@ -32,15 +41,28 @@ export const ImagesFields = ({ fieldIndex }: Props) => {
             <Flex className="w-full" justify="space-between">
               <Text fontSize="sm">{index}. image</Text>
               <Button
-                className="min-w-full"
+                className="min-w-fit"
                 size="xs"
                 variant="outline"
                 color="red"
-                onClick={() => handleRemove(index)}
+                onClick={() => {
+                  handleRemove(index);
+                }}
               >
                 삭제
               </Button>
             </Flex>
+            <ImageURLInput
+              onChange={(value) => {
+                handleImageURLChange(index, value);
+              }}
+            />
+            <Input
+              size="sm"
+              variant="filled"
+              placeholder="Alt"
+              {...register(`slices.${fieldIndex}.data.images.${index}.alt`)}
+            />
           </Flex>
         ))}
       </Flex>

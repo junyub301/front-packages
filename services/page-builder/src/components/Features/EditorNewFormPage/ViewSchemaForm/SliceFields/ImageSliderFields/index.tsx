@@ -20,15 +20,18 @@ export const ViewSchemaFormSliceImageSliderFields = ({ fieldIndex }: Props) => {
   useEffect(() => {
     setValue(`slices.${fieldIndex}.sliceName`, "ImageSliderSlice");
   }, []);
+
   const handleRemove = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
+
     remove(fieldIndex);
   };
+
   return (
     <FormFieldSection
       title={
         <>
-          {fieldIndex}. ImageSlider
+          {fieldIndex}. ImageSlider{" "}
           <Button size="xs" variant="outline" color="red" onClick={handleRemove}>
             삭제
           </Button>
@@ -43,6 +46,13 @@ export const ViewSchemaFormSliceImageSliderFields = ({ fieldIndex }: Props) => {
         defaultValue="transparent"
         {...register(`slices.${fieldIndex}.data.sliceStyle.backgroundColor`)}
       />
+      <SelectField label="paddingX" {...register(`slices.${fieldIndex}.data.sliceStyle.paddingX`)}>
+        {Object.keys(vars.box.spacing).map((value) => (
+          <option key={value} value={value}>
+            {value}
+          </option>
+        ))}
+      </SelectField>
       <InputField
         label="imageItemWidth"
         type="number"
@@ -55,11 +65,6 @@ export const ViewSchemaFormSliceImageSliderFields = ({ fieldIndex }: Props) => {
         defaultValue={16}
         {...register(`slices.${fieldIndex}.data.sliceStyle.spaceBetween`)}
       />
-      <SelectField label="paddingX" {...register(`slices.${fieldIndex}.data.sliceStyle.paddingX`)}>
-        {Object.keys(vars.box.spacing).map((value) => (
-          <option key={value}>{value}</option>
-        ))}
-      </SelectField>
     </FormFieldSection>
   );
 };
