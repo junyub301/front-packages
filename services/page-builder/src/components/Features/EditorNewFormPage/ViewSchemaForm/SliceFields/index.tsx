@@ -6,6 +6,7 @@ import { useViewSchemaFormSliceFieldArray } from "@/src/hooks/useViewSchemaFormS
 import { ViewSchemaFormSliceTextFields } from "./TextFields";
 import { ViewSchemaFormSliceImageFields } from "./ImageFields";
 import { ViewSchemaFormSliceImageSliderFields } from "./ImageSliderFields";
+import { ViewSchemaFormSliceAccordionFields } from "./AccordionFields";
 export const ViewSchemaFormSliceFields = () => {
   const { fields } = useViewSchemaFormSliceFieldArray();
   return (
@@ -24,6 +25,8 @@ export const ViewSchemaFormSliceFields = () => {
             return <ViewSchemaFormSliceImageFields key={`${field.id}`} fieldIndex={index} />;
           case "ImageSliderSlice":
             return <ViewSchemaFormSliceImageSliderFields key={`${field.id}`} fieldIndex={index} />;
+          case "AccordionSlice":
+            return <ViewSchemaFormSliceAccordionFields key={`${field.id}`} fieldIndex={index} />;
           default:
             <></>;
         }
