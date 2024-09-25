@@ -55,6 +55,17 @@ export const EditorNavFormSideNavBar = () => {
         });
       },
     },
+    {
+      name: "AccordionSlice",
+      onClick: () => {
+        append({
+          sliceName: "AccordionSlice",
+          data: {
+            accordionContents: [],
+          },
+        });
+      },
+    },
   ];
   return (
     <DesktopFirstSideNav>
