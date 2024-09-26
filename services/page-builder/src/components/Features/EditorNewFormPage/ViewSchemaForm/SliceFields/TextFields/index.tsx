@@ -1,40 +1,24 @@
+import { InputField } from "@/src/components/Common/Form/Field/InputField";
+import { SelectField } from "@/src/components/Common/Form/Field/SelectField";
 import { FormFieldSection } from "@/src/components/Common/Form/Layouts/FormFieldSection";
 import { useViewSchemaFormContext } from "@/src/hooks/useViewSchemaForm";
-import { useViewSchemaFormSliceFieldArray } from "@/src/hooks/useViewSchemaFormSliceFieldArray";
-import { useEffect } from "react";
-import { Button } from "@study/react-components-button";
-import { InputField } from "@/src/components/Common/Form/Field/InputField";
 import { Divider } from "@study/react-components-layout";
 import { vars } from "@study/themes";
-import { SelectField } from "@/src/components/Common/Form/Field/SelectField";
+import { useEffect } from "react";
+import { SliceFieldTitleNavBar } from "../Common/SliceFieldTitleNavBar";
 import { ViewSchemaFormSliceTextHighlightFields } from "./TextHighlightField";
 type Props = {
   fieldIndex: number;
 };
 export const ViewSchemaFormSliceTextFields = ({ fieldIndex }: Props) => {
   const { register, setValue } = useViewSchemaFormContext();
-  const { remove } = useViewSchemaFormSliceFieldArray();
 
   useEffect(() => {
     setValue(`slices.${fieldIndex}.sliceName`, "TextSlice");
   }, []);
 
-  const handleRemove = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-    remove(fieldIndex);
-  };
-
   return (
-    <FormFieldSection
-      title={
-        <>
-          {fieldIndex}. Text
-          <Button size="xs" variant="outline" color="red" onClick={handleRemove}>
-            삭제
-          </Button>
-        </>
-      }
-    >
+    <FormFieldSection title={<SliceFieldTitleNavBar title={`${fieldIndex}. Text`} fieldIndex={fieldIndex} />}>
       <InputField label="text" {...register(`slices.${fieldIndex}.data.text`)} />
       <Divider />
       <InputField

@@ -5,6 +5,7 @@ import { vars } from "@study/themes";
 import { useEffect } from "react";
 import { Button } from "@study/react-components-button";
 import { useViewSchemaFormSliceFieldArray } from "@/src/hooks/useViewSchemaFormSliceFieldArray";
+import { SliceFieldTitleNavBar } from "../Common/SliceFieldTitleNavBar";
 
 type Props = {
   fieldIndex: number;
@@ -26,12 +27,14 @@ export const ViewSchemaFormSliceSpacingFields = ({ fieldIndex }: Props) => {
   return (
     <FormFieldSection
       title={
-        <>
-          {fieldIndex}. Spacing
-          <Button size="xs" variant="outline" color="red" onClick={handleRemove}>
-            삭제
-          </Button>
-        </>
+        <SliceFieldTitleNavBar
+          title={`${fieldIndex}. Spacing`}
+          appendRight={
+            <Button size="xs" variant="outline" color="green" onClick={handleRemove}>
+              🗑️
+            </Button>
+          }
+        />
       }
     >
       <InputField
