@@ -9,6 +9,15 @@ export const MetadataSliceSchema = z.object({
 
 export const AccordionSliceSchema = z.object({
   sliceName: z.literal("AccordionSlice"),
+  hideSlice: z.preprocess(
+    (char) =>
+      z
+        .enum(["true", "false"])
+        .transform((char) => JSON.parse(char))
+        .catch(char)
+        .parse(char),
+    z.boolean().optional(),
+  ),
   data: z.object({
     accordionContents: z.array(AccordionContentSchema),
     openedAccordion: z.preprocess(
@@ -47,6 +56,15 @@ export const AccordionSliceSchema = z.object({
 
 export const ImageSliceSchema = z.object({
   sliceName: z.literal("ImageSlice"),
+  hideSlice: z.preprocess(
+    (char) =>
+      z
+        .enum(["true", "false"])
+        .transform((char) => JSON.parse(char))
+        .catch(char)
+        .parse(char),
+    z.boolean().optional(),
+  ),
   data: ImageSchema.extend({
     sliceStyle: commonSliceStyleSchema
       .extend({
@@ -58,6 +76,15 @@ export const ImageSliceSchema = z.object({
 
 export const ImageSliderSliceSchema = z.object({
   sliceName: z.literal("ImageSliderSlice"),
+  hideSlice: z.preprocess(
+    (char) =>
+      z
+        .enum(["true", "false"])
+        .transform((char) => JSON.parse(char))
+        .catch(char)
+        .parse(char),
+    z.boolean().optional(),
+  ),
   data: z.object({
     images: z.array(ImageSchema),
     sliceStyle: commonSliceStyleSchema
@@ -77,6 +104,15 @@ export const ImageSliderSliceSchema = z.object({
 
 export const ImageSliderSectionSliceSchema = z.object({
   sliceName: z.literal("ImageSliderSectionSlice"),
+  hideSlice: z.preprocess(
+    (char) =>
+      z
+        .enum(["true", "false"])
+        .transform((char) => JSON.parse(char))
+        .catch(char)
+        .parse(char),
+    z.boolean().optional(),
+  ),
   data: z.object({
     text: z.string(),
     images: z.array(ImageSchema),
@@ -94,6 +130,15 @@ export const ImageSliderSectionSliceSchema = z.object({
 
 export const SpacingSliceSchema = z.object({
   sliceName: z.literal("SpacingSlice"),
+  hideSlice: z.preprocess(
+    (char) =>
+      z
+        .enum(["true", "false"])
+        .transform((char) => JSON.parse(char))
+        .catch(char)
+        .parse(char),
+    z.boolean().optional(),
+  ),
   data: z.object({
     sliceStyle: z
       .object({
@@ -109,6 +154,15 @@ export const SpacingSliceSchema = z.object({
 
 export const TextSliceSchema = z.object({
   sliceName: z.literal("TextSlice"),
+  hideSlice: z.preprocess(
+    (char) =>
+      z
+        .enum(["true", "false"])
+        .transform((char) => JSON.parse(char))
+        .catch(char)
+        .parse(char),
+    z.boolean().optional(),
+  ),
   data: z.object({
     text: z.string(),
     highlightTexts: z.array(z.string()).optional(),
