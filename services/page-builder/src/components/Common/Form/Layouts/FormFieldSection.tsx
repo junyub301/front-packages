@@ -11,9 +11,9 @@ export const FormFieldSection = ({ title, children }: Props) => {
   const [uniqueId] = useState(randomUUID());
   const itemName = `${title}_${uniqueId}`;
   return (
-    <Accordion defaultActiveItems={[itemName]}>
+    <Accordion className="w-full" defaultActiveItems={[itemName]}>
       <AccordionItem itemName={itemName}>
-        <AccordionButton>{title}</AccordionButton>
+        <AccordionButton className="min-h-[48px]">{title}</AccordionButton>
         <AccordionPanel>{children}</AccordionPanel>
       </AccordionItem>
     </Accordion>
