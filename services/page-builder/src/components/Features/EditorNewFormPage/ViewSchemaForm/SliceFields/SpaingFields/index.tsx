@@ -28,6 +28,7 @@ export const ViewSchemaFormSliceSpacingFields = ({ fieldIndex }: Props) => {
     <FormFieldSection
       title={
         <SliceFieldTitleNavBar
+          fieldIndex={fieldIndex}
           title={`${fieldIndex}. Spacing`}
           appendRight={
             <Button size="xs" variant="outline" color="green" onClick={handleRemove}>
