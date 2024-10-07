@@ -17,14 +17,11 @@ import { Box } from "@study/react-components-layout";
 export default function EditorNewJsonPage() {
   const { randomUUID } = new ShortUniqueId({ length: 10 });
   const [viewId] = useState(randomUUID());
-  const { validateViewSchema, handleEditorValidation } =
-    useViewSchemaValidation();
+  const { validateViewSchema, handleEditorValidation } = useViewSchemaValidation();
 
   const { toast } = useToast();
 
-  const [schema, setSchema] = useState(
-    formatObjectToJson(ViewSliceSchemaSnippet.init),
-  );
+  const [schema, setSchema] = useState(formatObjectToJson(ViewSliceSchemaSnippet.init));
 
   const handleReset = () => {
     setSchema(formatObjectToJson(ViewSliceSchemaSnippet.init));
@@ -50,16 +47,18 @@ export default function EditorNewJsonPage() {
     validateViewSchema({
       viewSchema: schema,
       onSuccess: async () => {
+        const objectifiedSchema = JSON.parse(schema);
+        const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
+        const slug = `${convertedSlug}-${viewId}`;
+        previewStorage.set(viewId, schema);
         try {
-          const objectifiedSchema = JSON.parse(schema);
-          const convertedSlug = objectifiedSchema.slug.split(" ").join("-");
-          const slug = `${convertedSlug}-${viewId}`;
           await putViewDetail({
             viewId,
             data: {
               value: schema,
               metadata: {
                 createAt: new Date().toISOString(),
+                isDraft: false,
                 title: objectifiedSchema.slug,
               },
             },
@@ -89,12 +88,7 @@ export default function EditorNewJsonPage() {
         <Button size="md" color="red" variant="outline" onClick={handleReset}>
           초기화
         </Button>
-        <Button
-          size="md"
-          color="gray"
-          variant="outline"
-          onClick={handlePreview}
-        >
+        <Button size="md" color="gray" variant="outline" onClick={handlePreview}>
           미리보기
         </Button>
         <Button size="md" color="green" onClick={handlePublish}>
@@ -103,11 +97,7 @@ export default function EditorNewJsonPage() {
       </DesktopFirstNav>
       <DesktopFirstBody padding={0}>
         <DesktopFirstSideNav>
-          <JsonPresetList
-            validateViewSchema={validateViewSchema}
-            schema={schema}
-            setSchema={setSchema}
-          />
+          <JsonPresetList validateViewSchema={validateViewSchema} schema={schema} setSchema={setSchema} />
         </DesktopFirstSideNav>
         <Box className="w-full min-h-screen relative top-0 ml-[280px]">
           <JsonEditor

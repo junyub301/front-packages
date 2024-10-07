@@ -4,9 +4,7 @@ import { useViewSchemaSlices } from "@/src/hooks/useViewSchemaSlices";
 import { ViewSchemaProps } from "@/src/utils/validation/schema/types";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
-const ViewPage = ({
-  jsonSchema,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const ViewPage = ({ jsonSchema }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const slices = useViewSchemaSlices(jsonSchema);
   return <MobileFirstLayout>{slices}</MobileFirstLayout>;
 };
@@ -22,7 +20,9 @@ export const getStaticProps: GetStaticProps<{
   const viewId = sliceSlug[sliceSlug.length - 1];
 
   try {
-    const { value } = await getViewDetail({ viewId });
+    const { value, metadata } = await getViewDetail({ viewId });
+
+    if (metadata.isDraft) return { notFound: true };
     return {
       props: {
         jsonSchema: value,
