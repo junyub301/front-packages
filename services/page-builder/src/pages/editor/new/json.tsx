@@ -58,6 +58,7 @@ export default function EditorNewJsonPage() {
               value: schema,
               metadata: {
                 createAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString(),
                 isDraft: false,
                 title: objectifiedSchema.slug,
               },
