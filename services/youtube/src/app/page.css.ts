@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { f } from "../shared/styles/functions";
+import { f } from "@/src/shared/styles/functions";
 import { vars } from "@study/themes";
 
 export const main = style([
