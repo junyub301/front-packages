@@ -1,5 +1,11 @@
-import { GetVideoPopularListRequestParams } from "@/src/features/main/api/getVideosPopularList";
+import {
+  GetVideoPopularListRequestParams,
+  GetVideoPopularListResponse,
+} from "@/src/features/main/api/getVideosPopularList";
 import { youtubeServerInstance } from "@/src/shared/api/youtube/server/instance";
+import { formatKoreanTextCompareDatesFromNow } from "@/src/shared/format/date";
+import { formatNumberToKoreanText } from "@/src/shared/format/number";
+import { youtube_v3 } from "googleapis";
 import { NextRequest } from "next/server";
 
 export const GET = async (request: NextRequest) => {
@@ -12,7 +18,9 @@ export const GET = async (request: NextRequest) => {
       ...queryParams,
     });
 
-    return Response.json({ data });
+    const mappedData = mappingResponse(data);
+
+    return Response.json(mappedData);
   } catch (error) {
     return new Response(JSON.stringify({ message: "Internal Server Error" }), { status: 500 });
   }
@@ -22,5 +30,34 @@ const parseQueryParams = (params: URLSearchParams): GetVideoPopularListRequestPa
   return {
     maxResults: Number(params.get("maxResults") ?? "10"),
     pageToken: params.get("pageToken") ?? undefined,
+  };
+};
+
+const mappingResponse = (data: youtube_v3.Schema$VideoListResponse): GetVideoPopularListResponse => {
+  const lists =
+    data?.items?.map(({ id, snippet, statistics }) => {
+      const publishedAt = snippet?.publishedAt ?? "";
+      const perseViewCount = parseInt(statistics?.viewCount ?? "0");
+      return {
+        videoId: id ?? "",
+        title: snippet?.title ?? "",
+        description: snippet?.description ?? "",
+        channelId: snippet?.channelId ?? "",
+        channelTitle: snippet?.channelTitle ?? "",
+        thumbnail: {
+          url: snippet?.thumbnails?.medium?.url ?? "",
+        },
+        publishedAt,
+        publishedAtDisplayText: formatKoreanTextCompareDatesFromNow(publishedAt),
+        viewCount: perseViewCount,
+        viewCountDisplayText: formatNumberToKoreanText(perseViewCount, true),
+      };
+    }) ?? [];
+
+  return {
+    lists,
+    prevPageToken: data.prevPageToken ?? undefined,
+    nextPageToken: data.nextPageToken ?? undefined,
+    totalResults: data.pageInfo?.totalResults ?? 0,
   };
 };
