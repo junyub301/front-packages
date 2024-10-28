@@ -1,16 +1,18 @@
 import {
-  GetVideoPopularListRequestParams,
-  GetVideoPopularListResponse,
+  GetVideosPopularListRequestParams,
+  GetVideosPopularListResponse,
 } from "@/src/features/main/api/getVideosPopularList";
 import { youtubeServerInstance } from "@/src/shared/api/youtube/server/instance";
-import { formatKoreanTextCompareDatesFromNow } from "@/src/shared/format/date";
-import { formatNumberToKoreanText } from "@/src/shared/format/number";
+import { formatKoreanTextCompareDatesFromNow } from "@/src/shared/utils/format/date";
+import { formatNumberToKoreanText } from "@/src/shared/utils/format/number";
 import { youtube_v3 } from "googleapis";
 import { NextRequest } from "next/server";
 
 export const GET = async (request: NextRequest) => {
   try {
+    // Params Validation 생략
     const queryParams = parseQueryParams(request.nextUrl.searchParams);
+
     const { data } = await youtubeServerInstance.videos.list({
       part: ["snippet", "statistics"],
       chart: "mostPopular",
@@ -21,23 +23,27 @@ export const GET = async (request: NextRequest) => {
     const mappedData = mappingResponse(data);
 
     return Response.json(mappedData);
-  } catch (error) {
-    return new Response(JSON.stringify({ message: "Internal Server Error" }), { status: 500 });
+  } catch {
+    // 에러를 간단하게 처리
+    return new Response(JSON.stringify({ message: "Internal Server Error" }), {
+      status: 500,
+    });
   }
 };
 
-const parseQueryParams = (params: URLSearchParams): GetVideoPopularListRequestParams => {
+const parseQueryParams = (params: URLSearchParams): GetVideosPopularListRequestParams => {
   return {
     maxResults: Number(params.get("maxResults") ?? "10"),
     pageToken: params.get("pageToken") ?? undefined,
   };
 };
 
-const mappingResponse = (data: youtube_v3.Schema$VideoListResponse): GetVideoPopularListResponse => {
+const mappingResponse = (data: youtube_v3.Schema$VideoListResponse): GetVideosPopularListResponse => {
   const lists =
     data?.items?.map(({ id, snippet, statistics }) => {
       const publishedAt = snippet?.publishedAt ?? "";
-      const perseViewCount = parseInt(statistics?.viewCount ?? "0");
+      const parsedViewCount = parseInt(statistics?.viewCount ?? "0");
+
       return {
         videoId: id ?? "",
         title: snippet?.title ?? "",
@@ -49,8 +55,8 @@ const mappingResponse = (data: youtube_v3.Schema$VideoListResponse): GetVideoPop
         },
         publishedAt,
         publishedAtDisplayText: formatKoreanTextCompareDatesFromNow(publishedAt),
-        viewCount: perseViewCount,
-        viewCountDisplayText: formatNumberToKoreanText(perseViewCount, true),
+        viewCount: parsedViewCount,
+        viewCountDisplayText: formatNumberToKoreanText(parsedViewCount, true),
       };
     }) ?? [];
 
