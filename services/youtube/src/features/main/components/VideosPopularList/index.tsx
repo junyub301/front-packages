@@ -1,21 +1,19 @@
 "use client";
-import { vars } from "@study/themes";
 import { useGetVideosPopularList } from "../../hooks/useGetVideosPopularList";
-import { useEffect } from "react";
+import * as s from "./index.css";
 
 export const VideosPopularList = () => {
-  const { data, fetchNextPage, isFetchingNextPage } = useGetVideosPopularList({});
-  useEffect(() => {
-    setTimeout(() => {
-      fetchNextPage();
-    }, 2000);
-  }, []);
+  const { data } = useGetVideosPopularList({});
+
+  const flatData = data.pages.map((page) => page.lists ?? []).flat();
+
   return (
-    <section style={{ color: vars.colors.$scale.gray[900] }}>
-      <h2>목록</h2>
-      <br />
-      <p>fetching: {isFetchingNextPage ? "true" : "false"}</p>
-      <p>{data.pages[0].lists?.[0].title}</p>
+    <section className={s.wrapper}>
+      {flatData.map((item) => (
+        <div key={item.videoId} className={s.item}>
+          <div className={s.itemWrapper}></div>
+        </div>
+      ))}
     </section>
   );
 };
