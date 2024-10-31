@@ -1,19 +1,28 @@
 "use client";
+import { VisibilityLoader } from "@/src/shared/components/VisibilityLoader";
 import { useGetVideosPopularList } from "../../hooks/useGetVideosPopularList";
-import * as s from "./index.css";
+import { VideosPopularListItem } from "./ListItem";
+import * as s from "./style.css";
 
 export const VideosPopularList = () => {
-  const { data } = useGetVideosPopularList({});
+  const { data, fetchNextPage, isFetchingNextPage, hasNextPage } = useGetVideosPopularList({});
 
   const flatData = data.pages.map((page) => page.lists ?? []).flat();
 
   return (
-    <section className={s.wrapper}>
-      {flatData.map((item) => (
-        <div key={item.videoId} className={s.item}>
-          <div className={s.itemWrapper}></div>
-        </div>
-      ))}
-    </section>
+    <>
+      <section className={s.wrapper}>
+        {flatData.map((item) => (
+          <VideosPopularListItem video={item} key={item.videoId} />
+        ))}
+      </section>
+      {hasNextPage && (
+        <VisibilityLoader
+          callback={() => {
+            !isFetchingNextPage && fetchNextPage();
+          }}
+        />
+      )}
+    </>
   );
 };
