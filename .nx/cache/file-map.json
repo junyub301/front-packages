@@ -144,104 +144,476 @@
       },
       {
         "file": "yarn.lock",
-        "hash": "3412886370378802194"
+        "hash": "930963296912548620"
       }
     ],
     "projectFileMap": {
-      "@study/esbuild-config": [
+      "@study/react-hooks-toggle": [
         {
-          "file": "packages/esbuild-config/README.md",
-          "hash": "6886952344311067916"
-        },
-        {
-          "file": "packages/esbuild-config/index.js",
-          "hash": "17404371993979563223"
-        },
-        {
-          "file": "packages/esbuild-config/package.json",
-          "hash": "15048194758951765621"
-        }
-      ],
-      "@study/react-hooks-select": [
-        {
-          "file": "packages/react/components/hooks/select/build.js",
+          "file": "packages/react/components/hooks/toggle/build.js",
           "hash": "4805474870462917960"
         },
         {
-          "file": "packages/react/components/hooks/select/package.json",
-          "hash": "13922840325768378222",
+          "file": "packages/react/components/hooks/toggle/package.json",
+          "hash": "16523555946726119529",
           "deps": [
             "@study/esbuild-config",
             "npm:typescript"
           ]
         },
         {
-          "file": "packages/react/components/hooks/select/src/index.ts",
-          "hash": "5223736269965586498"
+          "file": "packages/react/components/hooks/toggle/src/index.ts",
+          "hash": "13190166400749655539"
         },
         {
-          "file": "packages/react/components/hooks/select/src/types.ts",
-          "hash": "3698533023306847201"
+          "file": "packages/react/components/hooks/toggle/src/types.ts",
+          "hash": "13666444803187522029"
         },
         {
-          "file": "packages/react/components/hooks/select/src/useSelect.ts",
-          "hash": "10272838170998038664"
+          "file": "packages/react/components/hooks/toggle/src/useToggle.ts",
+          "hash": "14239154787111631704"
         },
         {
-          "file": "packages/react/components/hooks/select/tsconfig.json",
+          "file": "packages/react/components/hooks/toggle/tsconfig.json",
           "hash": "18367015080906251936"
         }
       ],
-      "@study/react-components-accordion": [
+      "@study/youtube": [
         {
-          "file": "packages/react/components/accordion/build.js",
+          "file": "services/youtube/.gitignore",
+          "hash": "5895792542795529503"
+        },
+        {
+          "file": "services/youtube/README.md",
+          "hash": "12205685531602560652"
+        },
+        {
+          "file": "services/youtube/next.config.js",
+          "hash": "7909036104591713581"
+        },
+        {
+          "file": "services/youtube/package.json",
+          "hash": "8945857001004966712",
+          "deps": [
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "services/youtube/src/app/(youtube)/layout.tsx",
+          "hash": "17412953946594167965"
+        },
+        {
+          "file": "services/youtube/src/app/(youtube)/page.tsx",
+          "hash": "14529404083068343932"
+        },
+        {
+          "file": "services/youtube/src/app/api/videos/popular-list/route.ts",
+          "hash": "17586848761835275056"
+        },
+        {
+          "file": "services/youtube/src/app/icon.png",
+          "hash": "5357700630467529096"
+        },
+        {
+          "file": "services/youtube/src/app/layout.tsx",
+          "hash": "1771797894878043484"
+        },
+        {
+          "file": "services/youtube/src/features/main/api/getVideosPopularList.ts",
+          "hash": "11515974048612437318"
+        },
+        {
+          "file": "services/youtube/src/features/main/components/VideosPopularList/ListItem/Skeleton.tsx",
+          "hash": "6778334736333093386"
+        },
+        {
+          "file": "services/youtube/src/features/main/components/VideosPopularList/ListItem/index.tsx",
+          "hash": "18068147029719273517"
+        },
+        {
+          "file": "services/youtube/src/features/main/components/VideosPopularList/ListItem/style.css.ts",
+          "hash": "8927798113916046812"
+        },
+        {
+          "file": "services/youtube/src/features/main/components/VideosPopularList/Skeleton.tsx",
+          "hash": "11669776205128525152"
+        },
+        {
+          "file": "services/youtube/src/features/main/components/VideosPopularList/index.tsx",
+          "hash": "9932451619513371114"
+        },
+        {
+          "file": "services/youtube/src/features/main/components/VideosPopularList/style.css.ts",
+          "hash": "4971572174162484381"
+        },
+        {
+          "file": "services/youtube/src/features/main/hooks/useGetVideosPopularList.ts",
+          "hash": "9331854822016388771"
+        },
+        {
+          "file": "services/youtube/src/shared/api/youtube/constants.tsx",
+          "hash": "5218342173295502811"
+        },
+        {
+          "file": "services/youtube/src/shared/api/youtube/server/instance.ts",
+          "hash": "16260952329232274412"
+        },
+        {
+          "file": "services/youtube/src/shared/api/youtube/types/item.ts",
+          "hash": "5334072590352200962"
+        },
+        {
+          "file": "services/youtube/src/shared/api/youtube/types/list.ts",
+          "hash": "795498648621135829"
+        },
+        {
+          "file": "services/youtube/src/shared/components/QueryProvider/index.tsx",
+          "hash": "5489945383659950603"
+        },
+        {
+          "file": "services/youtube/src/shared/components/SearchNavigationBar/SearchForm/index.tsx",
+          "hash": "16711220090629619566"
+        },
+        {
+          "file": "services/youtube/src/shared/components/SearchNavigationBar/SearchForm/style.css.ts",
+          "hash": "18068490525013871171"
+        },
+        {
+          "file": "services/youtube/src/shared/components/SearchNavigationBar/index.tsx",
+          "hash": "16456385105184595997"
+        },
+        {
+          "file": "services/youtube/src/shared/components/SearchNavigationBar/logo.svg",
+          "hash": "4893173138728550126"
+        },
+        {
+          "file": "services/youtube/src/shared/components/SearchNavigationBar/style.css.ts",
+          "hash": "1732494605486072116"
+        },
+        {
+          "file": "services/youtube/src/shared/components/ThemeScript/index.tsx",
+          "hash": "6575537030854892045"
+        },
+        {
+          "file": "services/youtube/src/shared/components/VisibilityLoader/index.tsx",
+          "hash": "11154660568795369337"
+        },
+        {
+          "file": "services/youtube/src/shared/components/VisibilityLoader/style.css.ts",
+          "hash": "7899241365664584057"
+        },
+        {
+          "file": "services/youtube/src/shared/components/base/Skeleton/index.tsx",
+          "hash": "10009999548344764219"
+        },
+        {
+          "file": "services/youtube/src/shared/components/base/Spinner/index.tsx",
+          "hash": "8911008461231331484"
+        },
+        {
+          "file": "services/youtube/src/shared/components/base/Spinner/style.css.ts",
+          "hash": "16988438789292788149"
+        },
+        {
+          "file": "services/youtube/src/shared/hooks/useIntersectionObserver.ts",
+          "hash": "12782653744768805827"
+        },
+        {
+          "file": "services/youtube/src/shared/styles/fds.ts",
+          "hash": "1661429975735754745"
+        },
+        {
+          "file": "services/youtube/src/shared/styles/functions/f.css.ts",
+          "hash": "12706273018253251017"
+        },
+        {
+          "file": "services/youtube/src/shared/styles/functions/index.ts",
+          "hash": "5519596139623580755"
+        },
+        {
+          "file": "services/youtube/src/shared/styles/functions/layout.css.ts",
+          "hash": "9073361095164558422"
+        },
+        {
+          "file": "services/youtube/src/shared/styles/globals.css.ts",
+          "hash": "1076295896451243285"
+        },
+        {
+          "file": "services/youtube/src/shared/styles/index.ts",
+          "hash": "7323226281015649388"
+        },
+        {
+          "file": "services/youtube/src/shared/styles/reset.css",
+          "hash": "13900124967141254529"
+        },
+        {
+          "file": "services/youtube/src/shared/utils/format/date.ts",
+          "hash": "14840034636789299018"
+        },
+        {
+          "file": "services/youtube/src/shared/utils/format/number.ts",
+          "hash": "4821859539515510884"
+        },
+        {
+          "file": "services/youtube/tsconfig.json",
+          "hash": "7272620148680242173"
+        }
+      ],
+      "@study/react-components-layout": [
+        {
+          "file": "packages/react/components/layout/build.js",
           "hash": "16252997952086185447"
         },
         {
-          "file": "packages/react/components/accordion/package.json",
-          "hash": "18168384778295789852",
+          "file": "packages/react/components/layout/package.json",
+          "hash": "17022594818723432903",
           "deps": [
-            "@study/react-hooks-button",
             "@study/esbuild-config",
             "@study/themes",
             "npm:typescript"
           ]
         },
         {
-          "file": "packages/react/components/accordion/src/Accordion.tsx",
-          "hash": "11148547071522784243"
+          "file": "packages/react/components/layout/src/core/styles.css.ts",
+          "hash": "13557761744489333493"
         },
         {
-          "file": "packages/react/components/accordion/src/AccordionButton.tsx",
-          "hash": "8978620079742652803"
+          "file": "packages/react/components/layout/src/core/types.ts",
+          "hash": "18209277437042316569"
         },
         {
-          "file": "packages/react/components/accordion/src/AccordionContext.tsx",
-          "hash": "16802727246996972943"
+          "file": "packages/react/components/layout/src/index.ts",
+          "hash": "8621517988113352239"
         },
         {
-          "file": "packages/react/components/accordion/src/AccordionItem.tsx",
-          "hash": "4382716568520512513"
+          "file": "packages/react/components/layout/src/layout/Box.tsx",
+          "hash": "16601999831277774650"
         },
         {
-          "file": "packages/react/components/accordion/src/AccordionPanel.tsx",
-          "hash": "11750955004819589884"
+          "file": "packages/react/components/layout/src/layout/Divider.tsx",
+          "hash": "15086942496398781279"
         },
         {
-          "file": "packages/react/components/accordion/src/index.ts",
-          "hash": "6692487404382574495"
+          "file": "packages/react/components/layout/src/layout/Flex.tsx",
+          "hash": "5124162936785398344"
         },
         {
-          "file": "packages/react/components/accordion/src/style.css.ts",
-          "hash": "8488718328247379222"
+          "file": "packages/react/components/layout/src/layout/Grid.tsx",
+          "hash": "9479262443662207993"
         },
         {
-          "file": "packages/react/components/accordion/src/types.ts",
-          "hash": "8195188508654841880"
+          "file": "packages/react/components/layout/src/layout/GridItem.tsx",
+          "hash": "8225061969589192036"
         },
         {
-          "file": "packages/react/components/accordion/tsconfig.json",
-          "hash": "13058542263114430866"
+          "file": "packages/react/components/layout/src/layout/List.tsx",
+          "hash": "13532716284986474181"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/ListItem.tsx",
+          "hash": "7740919160086565125"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/OrderedList.tsx",
+          "hash": "2437058305944227471"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/UnOrderedList.tsx",
+          "hash": "17095645328966964637"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/index.ts",
+          "hash": "14159818036712798872"
+        },
+        {
+          "file": "packages/react/components/layout/src/layout/types.ts",
+          "hash": "14607438692845838685"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/Heading.tsx",
+          "hash": "17805656250761922285"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/Text.tsx",
+          "hash": "13946903659510709191"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/index.ts",
+          "hash": "462209517168200293"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/style.css.ts",
+          "hash": "10496763905579722229"
+        },
+        {
+          "file": "packages/react/components/layout/src/typography/types.ts",
+          "hash": "12376931186284630156"
+        },
+        {
+          "file": "packages/react/components/layout/src/utils/properties.ts",
+          "hash": "5698855879563130366"
+        },
+        {
+          "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "8481322677715247360"
+        }
+      ],
+      "@study/themes": [
+        {
+          "file": "packages/themes/build.js",
+          "hash": "17008445505923614303"
+        },
+        {
+          "file": "packages/themes/package.json",
+          "hash": "4799668863449112593",
+          "deps": [
+            "@study/esbuild-config",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/themes/scripts/build-css-module.js",
+          "hash": "2691046446969541613"
+        },
+        {
+          "file": "packages/themes/src/classes/index.ts",
+          "hash": "15146067985360994259"
+        },
+        {
+          "file": "packages/themes/src/classes/typography.ts",
+          "hash": "9322460245457577087"
+        },
+        {
+          "file": "packages/themes/src/index.ts",
+          "hash": "10898633836259025946"
+        },
+        {
+          "file": "packages/themes/src/variables/box.ts",
+          "hash": "17415301785716516678"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/index.ts",
+          "hash": "5597373426469787833"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/scale.ts",
+          "hash": "203176103392636372"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/dark.ts",
+          "hash": "14400898959681543855"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/index.ts",
+          "hash": "17981935273116906080"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/light.ts",
+          "hash": "9041976704426893786"
+        },
+        {
+          "file": "packages/themes/src/variables/index.ts",
+          "hash": "9343087048230704055"
+        },
+        {
+          "file": "packages/themes/src/variables/typography.ts",
+          "hash": "1729358794327708129"
+        },
+        {
+          "file": "packages/themes/tsconfig.json",
+          "hash": "8341753514460594905"
+        }
+      ],
+      "@study/react-components-toast": [
+        {
+          "file": "packages/react/components/toast/build.js",
+          "hash": "1961804862492589000"
+        },
+        {
+          "file": "packages/react/components/toast/package.json",
+          "hash": "4186447816483256638",
+          "deps": [
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/toast/src/Toast.tsx",
+          "hash": "2817745947224411411"
+        },
+        {
+          "file": "packages/react/components/toast/src/ToastContainer.tsx",
+          "hash": "6164995706258880632"
+        },
+        {
+          "file": "packages/react/components/toast/src/ToastContext.ts",
+          "hash": "10161058494353877725"
+        },
+        {
+          "file": "packages/react/components/toast/src/ToastProvider.tsx",
+          "hash": "2548275472570769449"
+        },
+        {
+          "file": "packages/react/components/toast/src/index.ts",
+          "hash": "7250574523632467111"
+        },
+        {
+          "file": "packages/react/components/toast/src/style.css.ts",
+          "hash": "4432905196715586652"
+        },
+        {
+          "file": "packages/react/components/toast/src/types.ts",
+          "hash": "13481647225971472081"
+        },
+        {
+          "file": "packages/react/components/toast/tsconfig.json",
+          "hash": "8481322677715247360"
+        }
+      ],
+      "@study/react-components-input": [
+        {
+          "file": "packages/react/components/input/build.js",
+          "hash": "1961804862492589000"
+        },
+        {
+          "file": "packages/react/components/input/package.json",
+          "hash": "5157280637659522080",
+          "deps": [
+            "@study/react-hooks-input",
+            "@study/esbuild-config",
+            "@study/themes",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "packages/react/components/input/src/Input.tsx",
+          "hash": "11725155480105161803"
+        },
+        {
+          "file": "packages/react/components/input/src/InputGroup.tsx",
+          "hash": "8720619603614394445"
+        },
+        {
+          "file": "packages/react/components/input/src/InputLeftAddon.tsx",
+          "hash": "2166008134701844997"
+        },
+        {
+          "file": "packages/react/components/input/src/index.ts",
+          "hash": "7206012316751655975"
+        },
+        {
+          "file": "packages/react/components/input/src/style.css.ts",
+          "hash": "4161688111947079312"
+        },
+        {
+          "file": "packages/react/components/input/src/types.ts",
+          "hash": "1992055716731990099"
+        },
+        {
+          "file": "packages/react/components/input/tsconfig.json",
+          "hash": "8481322677715247360"
         }
       ],
       "@study/storybook": [
@@ -344,53 +716,6 @@
           "hash": "10180428416896896795"
         }
       ],
-      "@study/react-components-toast": [
-        {
-          "file": "packages/react/components/toast/build.js",
-          "hash": "1961804862492589000"
-        },
-        {
-          "file": "packages/react/components/toast/package.json",
-          "hash": "4186447816483256638",
-          "deps": [
-            "@study/esbuild-config",
-            "@study/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/toast/src/Toast.tsx",
-          "hash": "2817745947224411411"
-        },
-        {
-          "file": "packages/react/components/toast/src/ToastContainer.tsx",
-          "hash": "6164995706258880632"
-        },
-        {
-          "file": "packages/react/components/toast/src/ToastContext.ts",
-          "hash": "10161058494353877725"
-        },
-        {
-          "file": "packages/react/components/toast/src/ToastProvider.tsx",
-          "hash": "2548275472570769449"
-        },
-        {
-          "file": "packages/react/components/toast/src/index.ts",
-          "hash": "7250574523632467111"
-        },
-        {
-          "file": "packages/react/components/toast/src/style.css.ts",
-          "hash": "4432905196715586652"
-        },
-        {
-          "file": "packages/react/components/toast/src/types.ts",
-          "hash": "13481647225971472081"
-        },
-        {
-          "file": "packages/react/components/toast/tsconfig.json",
-          "hash": "8481322677715247360"
-        }
-      ],
       "@study/react-components-select": [
         {
           "file": "packages/react/components/select/build.js",
@@ -427,105 +752,6 @@
           "hash": "8481322677715247360"
         }
       ],
-      "@study/react-components-layout": [
-        {
-          "file": "packages/react/components/layout/build.js",
-          "hash": "16252997952086185447"
-        },
-        {
-          "file": "packages/react/components/layout/package.json",
-          "hash": "17022594818723432903",
-          "deps": [
-            "@study/esbuild-config",
-            "@study/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/layout/src/core/styles.css.ts",
-          "hash": "13557761744489333493"
-        },
-        {
-          "file": "packages/react/components/layout/src/core/types.ts",
-          "hash": "18209277437042316569"
-        },
-        {
-          "file": "packages/react/components/layout/src/index.ts",
-          "hash": "8621517988113352239"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Box.tsx",
-          "hash": "16601999831277774650"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Divider.tsx",
-          "hash": "15086942496398781279"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Flex.tsx",
-          "hash": "5124162936785398344"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/Grid.tsx",
-          "hash": "9479262443662207993"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/GridItem.tsx",
-          "hash": "8225061969589192036"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/List.tsx",
-          "hash": "13532716284986474181"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/ListItem.tsx",
-          "hash": "7740919160086565125"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/OrderedList.tsx",
-          "hash": "2437058305944227471"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/UnOrderedList.tsx",
-          "hash": "17095645328966964637"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/index.ts",
-          "hash": "14159818036712798872"
-        },
-        {
-          "file": "packages/react/components/layout/src/layout/types.ts",
-          "hash": "14607438692845838685"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/Heading.tsx",
-          "hash": "17805656250761922285"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/Text.tsx",
-          "hash": "13946903659510709191"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/index.ts",
-          "hash": "462209517168200293"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/style.css.ts",
-          "hash": "10496763905579722229"
-        },
-        {
-          "file": "packages/react/components/layout/src/typography/types.ts",
-          "hash": "12376931186284630156"
-        },
-        {
-          "file": "packages/react/components/layout/src/utils/properties.ts",
-          "hash": "5698855879563130366"
-        },
-        {
-          "file": "packages/react/components/layout/tsconfig.json",
-          "hash": "8481322677715247360"
-        }
-      ],
       "@study/react-hooks-button": [
         {
           "file": "packages/react/components/hooks/button/build.js",
@@ -559,121 +785,6 @@
         {
           "file": "packages/react/components/hooks/button/tsconfig.json",
           "hash": "18367015080906251936"
-        }
-      ],
-      "@study/themes": [
-        {
-          "file": "packages/themes/build.js",
-          "hash": "17008445505923614303"
-        },
-        {
-          "file": "packages/themes/package.json",
-          "hash": "4799668863449112593",
-          "deps": [
-            "@study/esbuild-config",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/themes/scripts/build-css-module.js",
-          "hash": "2691046446969541613"
-        },
-        {
-          "file": "packages/themes/src/classes/index.ts",
-          "hash": "15146067985360994259"
-        },
-        {
-          "file": "packages/themes/src/classes/typography.ts",
-          "hash": "9322460245457577087"
-        },
-        {
-          "file": "packages/themes/src/index.ts",
-          "hash": "10898633836259025946"
-        },
-        {
-          "file": "packages/themes/src/variables/box.ts",
-          "hash": "17415301785716516678"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/index.ts",
-          "hash": "5597373426469787833"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/scale.ts",
-          "hash": "203176103392636372"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/static/dark.ts",
-          "hash": "14400898959681543855"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/static/index.ts",
-          "hash": "17981935273116906080"
-        },
-        {
-          "file": "packages/themes/src/variables/colors/static/light.ts",
-          "hash": "9041976704426893786"
-        },
-        {
-          "file": "packages/themes/src/variables/index.ts",
-          "hash": "9343087048230704055"
-        },
-        {
-          "file": "packages/themes/src/variables/typography.ts",
-          "hash": "1729358794327708129"
-        },
-        {
-          "file": "packages/themes/tsconfig.json",
-          "hash": "8341753514460594905"
-        }
-      ],
-      "@study/docs": [
-        {
-          "file": "services/doc/README.md",
-          "hash": "15053103165082030748"
-        },
-        {
-          "file": "services/doc/next-env.d.ts",
-          "hash": "5909181270615354023"
-        },
-        {
-          "file": "services/doc/next.config.js",
-          "hash": "2406615844428129032"
-        },
-        {
-          "file": "services/doc/package.json",
-          "hash": "9329587237631158304",
-          "deps": [
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "services/doc/pages/_meta.json",
-          "hash": "14878034548335849775"
-        },
-        {
-          "file": "services/doc/pages/hooks/_meta.json",
-          "hash": "12538284921445778751"
-        },
-        {
-          "file": "services/doc/pages/hooks/index.mdx",
-          "hash": "9193978994666048943"
-        },
-        {
-          "file": "services/doc/pages/index.mdx",
-          "hash": "12471912762897381549"
-        },
-        {
-          "file": "services/doc/pages/themes/installation.mdx",
-          "hash": "12921378106385566758"
-        },
-        {
-          "file": "services/doc/theme.config.tsx",
-          "hash": "16400600930474143022"
-        },
-        {
-          "file": "services/doc/tsconfig.json",
-          "hash": "8852098440020119657"
         }
       ],
       "@study/page-builder": [
@@ -1032,140 +1143,149 @@
           "hash": "2611267974619056529"
         }
       ],
-      "@study/react-hooks-toggle": [
+      "@study/docs": [
         {
-          "file": "packages/react/components/hooks/toggle/build.js",
+          "file": "services/doc/README.md",
+          "hash": "15053103165082030748"
+        },
+        {
+          "file": "services/doc/next-env.d.ts",
+          "hash": "5909181270615354023"
+        },
+        {
+          "file": "services/doc/next.config.js",
+          "hash": "2406615844428129032"
+        },
+        {
+          "file": "services/doc/package.json",
+          "hash": "9329587237631158304",
+          "deps": [
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "services/doc/pages/_meta.json",
+          "hash": "14878034548335849775"
+        },
+        {
+          "file": "services/doc/pages/hooks/_meta.json",
+          "hash": "12538284921445778751"
+        },
+        {
+          "file": "services/doc/pages/hooks/index.mdx",
+          "hash": "9193978994666048943"
+        },
+        {
+          "file": "services/doc/pages/index.mdx",
+          "hash": "12471912762897381549"
+        },
+        {
+          "file": "services/doc/pages/themes/installation.mdx",
+          "hash": "12921378106385566758"
+        },
+        {
+          "file": "services/doc/theme.config.tsx",
+          "hash": "16400600930474143022"
+        },
+        {
+          "file": "services/doc/tsconfig.json",
+          "hash": "8852098440020119657"
+        }
+      ],
+      "@study/react-hooks-input": [
+        {
+          "file": "packages/react/components/hooks/input/build.js",
           "hash": "4805474870462917960"
         },
         {
-          "file": "packages/react/components/hooks/toggle/package.json",
-          "hash": "16523555946726119529",
+          "file": "packages/react/components/hooks/input/package.json",
+          "hash": "11744847213182130743",
           "deps": [
             "@study/esbuild-config",
             "npm:typescript"
           ]
         },
         {
-          "file": "packages/react/components/hooks/toggle/src/index.ts",
-          "hash": "13190166400749655539"
+          "file": "packages/react/components/hooks/input/src/index.ts",
+          "hash": "7663711916905442434"
         },
         {
-          "file": "packages/react/components/hooks/toggle/src/types.ts",
-          "hash": "13666444803187522029"
+          "file": "packages/react/components/hooks/input/src/types.ts",
+          "hash": "6549221623209390479"
         },
         {
-          "file": "packages/react/components/hooks/toggle/src/useToggle.ts",
-          "hash": "14239154787111631704"
+          "file": "packages/react/components/hooks/input/src/useInput.ts",
+          "hash": "13968062825936123883"
         },
         {
-          "file": "packages/react/components/hooks/toggle/tsconfig.json",
+          "file": "packages/react/components/hooks/input/tsconfig.json",
           "hash": "18367015080906251936"
         }
       ],
-      "@study/youtube": [
+      "@study/esbuild-config": [
         {
-          "file": "services/youtube/.gitignore",
-          "hash": "5895792542795529503"
+          "file": "packages/esbuild-config/README.md",
+          "hash": "6886952344311067916"
         },
         {
-          "file": "services/youtube/README.md",
-          "hash": "12205685531602560652"
+          "file": "packages/esbuild-config/index.js",
+          "hash": "17404371993979563223"
         },
         {
-          "file": "services/youtube/next.config.js",
-          "hash": "10570587689940855702"
+          "file": "packages/esbuild-config/package.json",
+          "hash": "15048194758951765621"
+        }
+      ],
+      "@study/react-components-accordion": [
+        {
+          "file": "packages/react/components/accordion/build.js",
+          "hash": "16252997952086185447"
         },
         {
-          "file": "services/youtube/package.json",
-          "hash": "8555917425419674513",
+          "file": "packages/react/components/accordion/package.json",
+          "hash": "18168384778295789852",
           "deps": [
+            "@study/react-hooks-button",
+            "@study/esbuild-config",
             "@study/themes",
             "npm:typescript"
           ]
         },
         {
-          "file": "services/youtube/src/app/(youtube)/page.css.ts",
-          "hash": "11197504517947747254"
+          "file": "packages/react/components/accordion/src/Accordion.tsx",
+          "hash": "11148547071522784243"
         },
         {
-          "file": "services/youtube/src/app/(youtube)/page.tsx",
-          "hash": "3436763510311349617"
+          "file": "packages/react/components/accordion/src/AccordionButton.tsx",
+          "hash": "8978620079742652803"
         },
         {
-          "file": "services/youtube/src/app/api/videos/popular-list/route.ts",
-          "hash": "14497631946770098669"
+          "file": "packages/react/components/accordion/src/AccordionContext.tsx",
+          "hash": "16802727246996972943"
         },
         {
-          "file": "services/youtube/src/app/icon.png",
-          "hash": "5357700630467529096"
+          "file": "packages/react/components/accordion/src/AccordionItem.tsx",
+          "hash": "4382716568520512513"
         },
         {
-          "file": "services/youtube/src/app/layout.tsx",
-          "hash": "9317392095143960514"
+          "file": "packages/react/components/accordion/src/AccordionPanel.tsx",
+          "hash": "11750955004819589884"
         },
         {
-          "file": "services/youtube/src/features/main/api/getVideosPopularList.ts",
-          "hash": "9960375439929137245"
+          "file": "packages/react/components/accordion/src/index.ts",
+          "hash": "6692487404382574495"
         },
         {
-          "file": "services/youtube/src/features/main/components/VideosPopularList/index.tsx",
-          "hash": "16825471536278519516"
+          "file": "packages/react/components/accordion/src/style.css.ts",
+          "hash": "8488718328247379222"
         },
         {
-          "file": "services/youtube/src/shared/api/youtube/constants.tsx",
-          "hash": "5218342173295502811"
+          "file": "packages/react/components/accordion/src/types.ts",
+          "hash": "8195188508654841880"
         },
         {
-          "file": "services/youtube/src/shared/api/youtube/server/instance.ts",
-          "hash": "16092597453454721117"
-        },
-        {
-          "file": "services/youtube/src/shared/api/youtube/types/Item.ts",
-          "hash": "5334072590352200962"
-        },
-        {
-          "file": "services/youtube/src/shared/api/youtube/types/list.ts",
-          "hash": "795498648621135829"
-        },
-        {
-          "file": "services/youtube/src/shared/components/ThemeScript/index.tsx",
-          "hash": "6575537030854892045"
-        },
-        {
-          "file": "services/youtube/src/shared/format/date.ts",
-          "hash": "14840034636789299018"
-        },
-        {
-          "file": "services/youtube/src/shared/format/number.ts",
-          "hash": "4821859539515510884"
-        },
-        {
-          "file": "services/youtube/src/shared/styles/fds.ts",
-          "hash": "1661429975735754745"
-        },
-        {
-          "file": "services/youtube/src/shared/styles/functions/f.css.ts",
-          "hash": "12706273018253251017"
-        },
-        {
-          "file": "services/youtube/src/shared/styles/functions/index.ts",
-          "hash": "5519596139623580755"
-        },
-        {
-          "file": "services/youtube/src/shared/styles/globals.css.ts",
-          "hash": "1076295896451243285"
-        },
-        {
-          "file": "services/youtube/src/shared/styles/index.ts",
-          "hash": "7323226281015649388"
-        },
-        {
-          "file": "services/youtube/src/shared/styles/reset.css",
-          "hash": "13900124967141254529"
-        },
-        {
-          "file": "services/youtube/tsconfig.json",
-          "hash": "7272620148680242173"
+          "file": "packages/react/components/accordion/tsconfig.json",
+          "hash": "13058542263114430866"
         }
       ],
       "@study/react-components-button": [
@@ -1204,77 +1324,33 @@
           "hash": "8481322677715247360"
         }
       ],
-      "@study/react-components-input": [
+      "@study/react-hooks-select": [
         {
-          "file": "packages/react/components/input/build.js",
-          "hash": "1961804862492589000"
-        },
-        {
-          "file": "packages/react/components/input/package.json",
-          "hash": "5157280637659522080",
-          "deps": [
-            "@study/react-hooks-input",
-            "@study/esbuild-config",
-            "@study/themes",
-            "npm:typescript"
-          ]
-        },
-        {
-          "file": "packages/react/components/input/src/Input.tsx",
-          "hash": "11725155480105161803"
-        },
-        {
-          "file": "packages/react/components/input/src/InputGroup.tsx",
-          "hash": "8720619603614394445"
-        },
-        {
-          "file": "packages/react/components/input/src/InputLeftAddon.tsx",
-          "hash": "2166008134701844997"
-        },
-        {
-          "file": "packages/react/components/input/src/index.ts",
-          "hash": "7206012316751655975"
-        },
-        {
-          "file": "packages/react/components/input/src/style.css.ts",
-          "hash": "4161688111947079312"
-        },
-        {
-          "file": "packages/react/components/input/src/types.ts",
-          "hash": "1992055716731990099"
-        },
-        {
-          "file": "packages/react/components/input/tsconfig.json",
-          "hash": "8481322677715247360"
-        }
-      ],
-      "@study/react-hooks-input": [
-        {
-          "file": "packages/react/components/hooks/input/build.js",
+          "file": "packages/react/components/hooks/select/build.js",
           "hash": "4805474870462917960"
         },
         {
-          "file": "packages/react/components/hooks/input/package.json",
-          "hash": "11744847213182130743",
+          "file": "packages/react/components/hooks/select/package.json",
+          "hash": "13922840325768378222",
           "deps": [
             "@study/esbuild-config",
             "npm:typescript"
           ]
         },
         {
-          "file": "packages/react/components/hooks/input/src/index.ts",
-          "hash": "7663711916905442434"
+          "file": "packages/react/components/hooks/select/src/index.ts",
+          "hash": "5223736269965586498"
         },
         {
-          "file": "packages/react/components/hooks/input/src/types.ts",
-          "hash": "6549221623209390479"
+          "file": "packages/react/components/hooks/select/src/types.ts",
+          "hash": "3698533023306847201"
         },
         {
-          "file": "packages/react/components/hooks/input/src/useInput.ts",
-          "hash": "13968062825936123883"
+          "file": "packages/react/components/hooks/select/src/useSelect.ts",
+          "hash": "10272838170998038664"
         },
         {
-          "file": "packages/react/components/hooks/input/tsconfig.json",
+          "file": "packages/react/components/hooks/select/tsconfig.json",
           "hash": "18367015080906251936"
         }
       ]
