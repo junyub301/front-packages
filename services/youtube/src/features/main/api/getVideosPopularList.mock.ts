@@ -1,7 +1,7 @@
 import { HttpHandler, http, HttpResponse } from "msw";
 import { getVideosPopularListUrl } from "./getVideosPopularList";
 
-export const getMOckVideosPopularList: HttpHandler = http.get(getVideosPopularListUrl, () => {
+export const getMockVideosPopularList: HttpHandler = http.get(getVideosPopularListUrl, () => {
   return HttpResponse.json(GET_MOCK_VIDEOS_POPULAR_LIST.success);
 });
 
