@@ -8,7 +8,7 @@ type Props = {
 export const VisibilityLoader = ({ children = <Spinner />, ...observerProps }: Props) => {
   const { ref } = useIntersectionObserver(observerProps);
   return (
-    <div ref={ref} className={s.wrapper}>
+    <div data-testid="VisibilityLoader" ref={ref} className={s.wrapper}>
       <div>{children}</div>
     </div>
   );

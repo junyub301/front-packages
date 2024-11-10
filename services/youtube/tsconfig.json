@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.service.json",
   "compilerOptions": {
+    "target": "ES6",
     "moduleResolution": "bundler",
     "jsx": "preserve",
     "incremental": true,
@@ -13,7 +14,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "types": ["vitest/globals"]
   },
   "include": [
     "next-env.d.ts",

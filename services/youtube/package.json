@@ -4,6 +4,8 @@
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
+    "test":"vitest run",
+    "test:watch":"vitest",
     "dev": "next dev",
     "dev:mocking": "NEXT_PUBLIC_MOCKING=true next dev",
     "build": "next build",
@@ -27,12 +29,20 @@
   "devDependencies": {
     "@mswjs/interceptors": "^0.36.10",
     "@svgr/webpack": "^8.1.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20.14.12",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vanilla-extract/next-plugin": "^2.4.6",
+    "@vanilla-extract/vite-plugin": "^4.0.17",
+    "@vitejs/plugin-react": "^4.3.3",
+    "happy-dom": "^15.11.0",
     "msw": "^2.4.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.4"
   },
   "msw": {
     "workerDirectory": [
