@@ -8,3 +8,14 @@ export const getSearchPageLink = (params: SearchPageQueryParams) => {
   if (params.order) parseParams.order = params.order;
   return `/search?${queryString.stringify(parseParams)}`;
 };
+
+export const getMainPageLink = () => {
+  return "/";
+};
+
+type VideoDetailPageParams = {
+  videoId: string;
+};
+export const getVideoDetailPageLink = (params: VideoDetailPageParams) => {
+  return "/";
+};
