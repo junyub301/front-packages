@@ -4,8 +4,8 @@
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
-    "test":"vitest run",
-    "test:watch":"vitest",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "dev": "next dev",
     "dev:mocking": "NEXT_PUBLIC_MOCKING=true next dev",
     "build": "next build",
@@ -41,6 +41,7 @@
     "@vitejs/plugin-react": "^4.3.3",
     "happy-dom": "^15.11.0",
     "msw": "^2.4.3",
+    "next-router-mock": "^0.9.13",
     "typescript": "^5.5.4",
     "vitest": "^2.1.4"
   },

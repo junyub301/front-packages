@@ -4,6 +4,9 @@ import { beforeAll, beforeEach, afterEach, afterAll, vi } from "vitest";
 
 import { setupIntersectionMocking, resetIntersectionMocking } from "react-intersection-observer/test-utils";
 import { server } from "./src/shared/mocks/server";
+import { MockNextNavigation } from "./src/shared/utils/test/mockNextNavigation";
+
+vi.mock("next/navigation", () => MockNextNavigation);
 
 beforeAll(() => {
   server.listen();
