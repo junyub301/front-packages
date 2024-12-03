@@ -56,6 +56,7 @@ const mappingResponse = (
   const videoDislikeCount = parseInt(videoData.statistics?.dislikeCount ?? "0");
   const channelViewCount = parseInt(channelData.statistics?.viewCount ?? "0");
   const channelSubscriberCount = parseInt(channelData.statistics?.subscriberCount ?? "0");
+  const videoCommentCount = parseInt(videoData.statistics?.commentCount ?? "0");
   return {
     detail: {
       videoId: videoData.id ?? "",
@@ -76,6 +77,8 @@ const mappingResponse = (
       likeCountDisplayText: formatNumberToKoreanText(videoLikeCount, true),
       dislikeCount: videoDislikeCount,
       dislikeCountDisplayText: formatNumberToKoreanText(videoDislikeCount, true),
+      commentCount: videoCommentCount,
+      commentCountDisplayText: formatNumberToKoreanText(videoCommentCount, true),
       channelInfo: {
         title: channelData.snippet?.title ?? "",
         description: channelData.snippet?.description ?? "",
