@@ -6,11 +6,11 @@ import { API_BASE_URL } from "@/src/shared/api/youtube/constants";
 export type GetVideosDetailCommentsListRequestParams = GetVideosDetailRequestParams &
   Pick<youtube_v3.Params$Resource$Commentthreads$List, "pageToken">;
 
-export type VideoDetailCommentListItem = CommentListItem & {
+export type VideosDetailCommentListItem = CommentListItem & {
   totalReplyCount: number;
 };
 
-export type GetVideosDetailCommentListResponse = ListResponse<VideoDetailCommentListItem>;
+export type GetVideosDetailCommentListResponse = ListResponse<VideosDetailCommentListItem>;
 
 export const getVideosDetailCommentListURL = `${API_BASE_URL}/api/videos/detail/:videoId/comment-list`;
 
