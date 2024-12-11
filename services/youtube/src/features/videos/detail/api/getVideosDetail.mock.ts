@@ -8,46 +8,81 @@ export const getMockVideosDetail: HttpHandler = http.get(getVideoDetailURL, () =
 export const GET_MOCK_VIDEOS_DETAIL = {
   success: {
     detail: {
-      videoId: "UnuqQs5iKOc",
-      title: "[#나라는가수] 수지 - 21 (원곡 : Gracie Abrams) | KBS 방송",
-      description: `수지는 물복임? 딱복임?
-        아니면 뮌헨에 찾아온 행복이자 축복임? 🪽
-        
-        독일 뮌헨을 촉촉한 가을 감성으로 물들인
-        수지의 ’21’ (원곡 : Gracie Abrams) 🥹
-        
-        #나라는가수 🎤 11월 2일 (토) 밤 10시 40분 첫 방송
-        
-        #나라는가수 #독일뮌헨  #수지 #배수지 #선우정아 #소향 #에이티즈 #헨리 #나우 #자이로`,
-      channelId: "UC3m0s5XAQydCtbLHc8j1Uog",
-      channelTitle: "KBS 한국방송",
+      videoId: "mp2JmllkjbM",
+      title: "[SUB] 영원한 건 절대 있어…☘️ | 7년만에 돌아온 빅뱅 | 집대성 ep.29",
+      description: `🏠집 밖으로 나온 대성 [집대성]🏠
+    #대성  #GD  #태양 #빅뱅 #bigbang 
+    
+    두둥- !
+    감격스런 GDx태양 출연을 기념하여 준비한
+    모에브 할인 프로모션 대공개 ( ˶'ᵕ'💐)💕
+    
+    집장인 분들은 아래 할인 링크에서
+    풍성한 혜택으로 만나보세요 ✧･ﾟ
+    
+    ╭─────────────╮
+    모에브 아누카틴 샴푸
+    모에브 아누카틴 트리트먼트
+    모에브 아누카틴 헤어오일 에센스 (NEW!)
+    ╰─────────────╯
+    
+    할인 링크 👉 https://bit.ly/3YH52pS
+    
+    치솟는 인기의 모에브 아누카틴 샴푸,
+    올리브영 온라인몰에서 만나보세요!
+    #moev #모에브 #한예슬샴푸
+    
+    💥매주 금요일 오후 6시 새로운 외출 공개🏃💨
+    💛구독 & 좋아요 & 알림 설정 부탁드려요~ ◠‿◠ 💛
+    
+    https://www.instagram.com/zip____ds
+    https://www.tiktok.com/@zip_ds
+    
+    비즈니스 및 광고 문의   
+    👉 www.azing.kr 👈
+    👉 azingcontents@azing.kr  👈
+    
+    *본 영상과 관련 없는 내용의 댓글, 욕설 및 스팸 광고를 포함한 댓글, 명예 훼손의 소지가 있는 등의 댓글은 통보 없이 삭제될 수 있습니다.`,
+      channelId: "UC64aGo-8uz1dndBAB3VtL2w",
+      channelTitle: "집대성",
       thumbnail: {
-        url: "https://i.ytimg.com/vi/UnuqQs5iKOc/mqdefault.jpg",
+        url: "https://i.ytimg.com/vi/mp2JmllkjbM/mqdefault.jpg",
         width: 320,
         height: 180,
       },
-      publishedAt: "2024-10-11T08:42:22Z",
-      publishedAtDisplayText: "1개월 전",
-      viewCount: 236961,
-      viewCountDisplayText: "23만",
-      likeCount: 6393,
-      likeCountDisplayText: "6,393",
+      publishedAt: "2024-11-05T09:00:06Z",
+      publishedAtDisplayText: "0개월 전",
+      viewCount: 6098002,
+      viewCountDisplayText: "609만",
+      likeCount: 195992,
+      likeCountDisplayText: "19만",
       dislikeCount: 0,
       dislikeCountDisplayText: "0",
+      commentCount: 12587,
+      commentCountDisplayText: "1만",
       channelInfo: {
-        title: "KBS 한국방송",
-        description:
-          "대한민국 대표 공영방송 KBS(Korean Broadcasting System) 의 공식 유튜브 채널 입니다. 재미있고 유익한 소식을 전하겠습니다.",
-        customUrl: "@1004kbs",
+        title: "집대성",
+        description: `찐 집돌이 ISFJ 대성이의 집 밖 나들이쑈! 
+    집대성에 오신 걸 환영합니다 😍
+    
+    💥매주 금요일 오후 6시 새로운 외출 공개🏃💨
+    💛구독 & 좋아요 & 알림 설정 부탁드려요~ ◠‿◠ 💛
+    
+    비즈니스 및 광고 문의   
+    👉 www.azing.kr 👈
+    👉 azingcontents@azing.kr  👈
+    
+    `,
+        customUrl: "@zip_ds",
         thumbnail: {
-          url: "https://yt3.ggpht.com/ugtqI-46OxffwzCm3ajRh85hzz6vonWOrsBtrfx0K9VokxLeDU_b1B0tdxONukEPXUGjfHjwpg=s240-c-k-c0x00ffffff-no-rj",
+          url: "https://yt3.ggpht.com/ifX-NKc5V9UpAAU1utykY1BQfRJM7e0q_5FebSkqN8BXStYQrtvYl6mjRyy1um0DjoySPu0X=s240-c-k-c0x00ffffff-no-rj",
           width: 240,
           height: 240,
         },
-        viewCount: 2266705032,
-        viewCountDisplayText: "22억",
-        subscriberCount: 2290000,
-        subscriberCountDisplayText: "229만",
+        viewCount: 97507853,
+        viewCountDisplayText: "9750만",
+        subscriberCount: 678000,
+        subscriberCountDisplayText: "67만",
         hiddenSubscriberCount: false,
       },
     },
