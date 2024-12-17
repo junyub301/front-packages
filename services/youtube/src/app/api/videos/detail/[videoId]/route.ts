@@ -1,4 +1,4 @@
-import { GetVideosDetailResponse } from "@/src/features/videos/detail/api/getVideosDetail";
+import { GetVideosDetailResponse } from "@/src/shared/api/youtube/client/videoDetail/getVideosDetail";
 import { VideoDetailPageParams } from "@/src/features/videos/detail/types";
 import { youtubeServerInstance } from "@/src/shared/api/youtube/server/instance";
 import { formatKoreanTextCompareDatesFromNow } from "@/src/shared/utils/format/date";
@@ -10,10 +10,13 @@ export const GET = async (request: NextRequest, { params }: VideoDetailPageParam
   try {
     const videoId = params.videoId;
 
-    const { data: videoData } = await youtubeServerInstance.videos.list({
-      part: ["snippet", "statistics"],
-      id: [videoId],
-    });
+    const [isShortVideo, { data: videoData }] = await Promise.all([
+      isShort(videoId),
+      youtubeServerInstance.videos.list({
+        part: ["snippet", "statistics"],
+        id: [videoId],
+      }),
+    ]);
 
     if (videoData?.items?.length === 0) {
       return new Response(JSON.stringify({ message: "Not Found" }), {
@@ -36,7 +39,11 @@ export const GET = async (request: NextRequest, { params }: VideoDetailPageParam
 
     const rawChannelDetail = channelData.items[0];
 
-    const mappedData = mappingResponse(rawVideoDetail, rawChannelDetail);
+    const mappedData = mappingResponse({
+      videoData: rawVideoDetail,
+      channelData: rawChannelDetail,
+      isShortVideo,
+    });
 
     return Response.json(mappedData);
   } catch {
@@ -46,10 +53,13 @@ export const GET = async (request: NextRequest, { params }: VideoDetailPageParam
   }
 };
 
-const mappingResponse = (
-  videoData: youtube_v3.Schema$Video,
-  channelData: youtube_v3.Schema$Channel,
-): GetVideosDetailResponse => {
+type Params = {
+  videoData: youtube_v3.Schema$Video;
+  channelData: youtube_v3.Schema$Channel;
+  isShortVideo: boolean;
+};
+
+const mappingResponse = ({ videoData, channelData, isShortVideo }: Params): GetVideosDetailResponse => {
   const videoPublishedAt = videoData.snippet?.publishedAt ?? "";
   const videoParsedViewCount = parseInt(videoData.statistics?.viewCount ?? "0");
   const videoLikeCount = parseInt(videoData.statistics?.likeCount ?? "0");
@@ -59,6 +69,7 @@ const mappingResponse = (
   const videoCommentCount = parseInt(videoData.statistics?.commentCount ?? "0");
   return {
     detail: {
+      videoType: isShortVideo ? "short" : "long",
       videoId: videoData.id ?? "",
       title: videoData.snippet?.title ?? "",
       description: videoData.snippet?.description ?? "",
@@ -96,4 +107,19 @@ const mappingResponse = (
       },
     },
   };
+};
+
+const isShort = async (videoId: string): Promise<boolean> => {
+  const url = `https://www.youtube.com/shorts/${videoId}`;
+  try {
+    const response = await fetch(url, { method: "HEAD" });
+    if (response.ok) {
+      const responseUrl = response.url;
+      return responseUrl.includes("/shorts/");
+    } else {
+      return false;
+    }
+  } catch (error) {
+    return false;
+  }
 };
