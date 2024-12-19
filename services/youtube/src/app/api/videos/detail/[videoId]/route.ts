@@ -18,7 +18,7 @@ export const GET = async (request: NextRequest, { params }: VideoDetailPageParam
       }),
     ]);
 
-    if (videoData?.items?.length === 0) {
+    if (!videoData?.items?.length) {
       return new Response(JSON.stringify({ message: "Not Found" }), {
         status: 404,
       });
@@ -31,7 +31,7 @@ export const GET = async (request: NextRequest, { params }: VideoDetailPageParam
       id: [rawVideoDetail.snippet?.channelId ?? ""],
     });
 
-    if (channelData?.items?.length === 0) {
+    if (!channelData?.items?.length) {
       return new Response(JSON.stringify({ message: "Not Found" }), {
         status: 404,
       });
@@ -47,6 +47,7 @@ export const GET = async (request: NextRequest, { params }: VideoDetailPageParam
 
     return Response.json(mappedData);
   } catch {
+    // 에러를 간단하게 처리
     return new Response(JSON.stringify({ message: "Internal Server Error" }), {
       status: 500,
     });
@@ -58,15 +59,16 @@ type Params = {
   channelData: youtube_v3.Schema$Channel;
   isShortVideo: boolean;
 };
-
 const mappingResponse = ({ videoData, channelData, isShortVideo }: Params): GetVideosDetailResponse => {
   const videoPublishedAt = videoData.snippet?.publishedAt ?? "";
   const videoParsedViewCount = parseInt(videoData.statistics?.viewCount ?? "0");
   const videoLikeCount = parseInt(videoData.statistics?.likeCount ?? "0");
   const videoDislikeCount = parseInt(videoData.statistics?.dislikeCount ?? "0");
+  const videoCommentCount = parseInt(videoData.statistics?.commentCount ?? "0");
+
   const channelViewCount = parseInt(channelData.statistics?.viewCount ?? "0");
   const channelSubscriberCount = parseInt(channelData.statistics?.subscriberCount ?? "0");
-  const videoCommentCount = parseInt(videoData.statistics?.commentCount ?? "0");
+
   return {
     detail: {
       videoType: isShortVideo ? "short" : "long",
@@ -110,11 +112,16 @@ const mappingResponse = ({ videoData, channelData, isShortVideo }: Params): GetV
 };
 
 const isShort = async (videoId: string): Promise<boolean> => {
-  const url = `https://www.youtube.com/shorts/${videoId}`;
+  const url = "https://www.youtube.com/shorts/" + videoId;
+
   try {
     const response = await fetch(url, { method: "HEAD" });
     if (response.ok) {
       const responseUrl = response.url;
+      console.log("shorts", responseUrl);
+
+      // responseURL이 "/shorts/videoId" 이면 true
+      // responseURL이 "/watch?=videoId" 이면 false
       return responseUrl.includes("/shorts/");
     } else {
       return false;
