@@ -1,15 +1,17 @@
-import YouTube from "react-youtube";
+import YouTube, { YouTubePlayer } from "react-youtube";
 import { VideoDetailPageParams } from "../../../detail/types";
 import * as s from "./style.css";
 import { useGetVideosDetail } from "../../../detail/hooks/useGetVideosDetail";
+import { useRef, useState } from "react";
 type Props = VideoDetailPageParams["params"];
 
 export const ShortsPlayer = ({ videoId: initVideoId }: Props) => {
+  const youtubePlayerRef = useRef<YouTubePlayer | null>(null);
   const {
     data: { detail: videoDetail },
   } = useGetVideosDetail({ videoId: initVideoId });
 
-  const { videoId } = videoDetail;
+  const { videoId, channelTitle, title, channelInfo } = videoDetail;
 
   const config = {
     width: "453px",
@@ -25,10 +27,43 @@ export const ShortsPlayer = ({ videoId: initVideoId }: Props) => {
     },
   };
 
+  const [isPlaying, setIsPlaying] = useState<boolean>(true);
+  const togglePlay = () => {
+    if (!youtubePlayerRef.current) return;
+    if (isPlaying) {
+      youtubePlayerRef.current.pauseVideo();
+      setIsPlaying(false);
+    } else {
+      youtubePlayerRef.current.playVideo();
+      setIsPlaying(true);
+    }
+  };
+
   return (
     <div className={s.wrapper}>
-      <div className={s.videoWrapper}>
-        <YouTube videoId={videoId} loading="eager" className={s.video} opts={config} />
+      <div className={s.infoWrapper}>
+        <div className={s.channelWrapper}>
+          <img
+            className={s.channelThumbnail}
+            src={channelInfo.thumbnail.url}
+            width={36}
+            height={36}
+            alt={channelTitle}
+          />
+          <p className={s.channelName}>{channelTitle}</p>
+        </div>
+        <p className={s.title}>{title}</p>
+      </div>
+      <div className={s.videoWrapper} onClick={togglePlay}>
+        <YouTube
+          videoId={videoId}
+          loading="eager"
+          className={s.video}
+          opts={config}
+          onReady={(e) => {
+            youtubePlayerRef.current = e.target;
+          }}
+        />
       </div>
     </div>
   );
