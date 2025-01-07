@@ -9,6 +9,7 @@ export const infoWrapper = style([
   {
     bottom: "1rem",
     left: "1rem",
+    zIndex: 2,
   },
 ]);
 
