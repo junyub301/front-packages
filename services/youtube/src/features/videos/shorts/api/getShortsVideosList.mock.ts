@@ -9,41 +9,37 @@ export const GET_MOCK_SHORTS_VIDEOS_LIST = {
   success: {
     lists: [
       {
-        lists: [
-          {
-            videoId: "Q9Yq-HtCnTg",
-          },
-          {
-            videoId: "ZJAkEF3gcNw",
-          },
-          {
-            videoId: "bE_bAokiEcw",
-          },
-          {
-            videoId: "2Nflr5ezuGk",
-          },
-          {
-            videoId: "L0izEolNPnI",
-          },
-          {
-            videoId: "urfMFkl7kw8",
-          },
-          {
-            videoId: "EKFmSc2LDO0",
-          },
-          {
-            videoId: "eQwVY_5U7Pk",
-          },
-          {
-            videoId: "c6_MBo3CUHg",
-          },
-          {
-            videoId: "HAplq7x5whc",
-          },
-        ],
-        nextPageToken: "CAoQAA",
-        totalResults: 1000000,
+        videoId: "Q9Yq-HtCnTg",
+      },
+      {
+        videoId: "ZJAkEF3gcNw",
+      },
+      {
+        videoId: "bE_bAokiEcw",
+      },
+      {
+        videoId: "2Nflr5ezuGk",
+      },
+      {
+        videoId: "L0izEolNPnI",
+      },
+      {
+        videoId: "urfMFkl7kw8",
+      },
+      {
+        videoId: "EKFmSc2LDO0",
+      },
+      {
+        videoId: "eQwVY_5U7Pk",
+      },
+      {
+        videoId: "c6_MBo3CUHg",
+      },
+      {
+        videoId: "HAplq7x5whc",
       },
     ],
+    nextPageToken: "CAoQAA",
+    totalResults: 1000000,
   },
 };

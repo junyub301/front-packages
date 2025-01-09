@@ -14,7 +14,7 @@ import ShortsVideoDetail from "../ShortsVideoDetail";
 type Props = VideoDetailPageParams["params"];
 
 export const ShortsVideoList = ({ videoId }: Props) => {
-  const { data } = useGetShortsVideosList({});
+  const { data, hasNextPage, fetchNextPage } = useGetShortsVideosList({});
   const flatData = flattenInfinityListData(data);
 
   const list = [{ videoId }, ...flatData];
@@ -36,14 +36,19 @@ export const ShortsVideoList = ({ videoId }: Props) => {
           width: "100%",
           height: "830px",
         }}
+        onReachEnd={() => {
+          if (hasNextPage) fetchNextPage();
+        }}
       >
         {list.map((item, index) => (
           <SwiperSlide key={item.videoId} virtualIndex={index}>
-            <div>
-              <Suspense>
-                <ShortsVideoDetail videoId={item.videoId} />
-              </Suspense>
-            </div>
+            {({ isActive }: { isActive: boolean }) => (
+              <div>
+                <Suspense>
+                  <ShortsVideoDetail videoId={item.videoId} autoPlay={isActive} />
+                </Suspense>
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
