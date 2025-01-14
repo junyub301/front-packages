@@ -1,11 +1,13 @@
 import { getMockVideosPopularList } from "@/src/features/main/api/getVideosPopularList.mock";
 import { getMockSearchVideosList } from "@/src/features/search/api/getSearchVideosList.mock";
-import { getMockVideosDetail } from "@/src/features/videos/detail/api/getVideosDetail.mock";
-import { getMOckVideosDetailCommentList } from "@/src/features/videos/detail/api/getVideosDetailCommentList.mock";
+import { getMockShortsVideosList } from "@/src/features/videos/shorts/api/getShortsVideosList.mock";
+import { getMockVideosDetail } from "@/src/shared/api/youtube/client/videoDetail/getVideosDetail.mock";
+import { getMockVideosDetailCommentList } from "@/src/shared/api/youtube/client/videoDetail/getVideosDetailCommentList.mock";
 import { HttpHandler } from "msw";
 export const handlers: HttpHandler[] = [
   getMockVideosPopularList,
   getMockSearchVideosList,
   getMockVideosDetail,
-  getMOckVideosDetailCommentList,
+  getMockVideosDetailCommentList,
+  getMockShortsVideosList,
 ];

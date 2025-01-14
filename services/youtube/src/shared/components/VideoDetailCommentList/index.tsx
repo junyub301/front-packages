@@ -1,9 +1,9 @@
 "use client";
 import { flattenInfinityListData } from "@/src/shared/utils/data";
-import { useGetVideosDetail } from "../../hooks/useGetVideosDetail";
-import { VideoDetailPageParams } from "../../types";
+import { useGetVideosDetail } from "../../../features/videos/detail/hooks/useGetVideosDetail";
+import { VideoDetailPageParams } from "../../../features/videos/detail/types";
 import * as s from "./style.css";
-import { useGetVideosDetailCommentList } from "../../hooks/useGetVideosDetailCommentList";
+import { useGetVideosDetailCommentList } from "../../../features/videos/detail/hooks/useGetVideosDetailCommentList";
 import { VideoDetailCommentListItem } from "./ListItem";
 import { VisibilityLoader } from "@/src/shared/components/VisibilityLoader";
 type Props = VideoDetailPageParams["params"];
